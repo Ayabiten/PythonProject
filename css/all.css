@@ -18,7 +18,7 @@ color: #222;
 }
 .carousel-inner img{
 width:100%;
-height:100%;
+height:60%;
 }
 .carousel-caption{
   position: absolute;
@@ -26,10 +26,21 @@ height:100%;
   transform: translateY(-50%);
 }
 .carousel-inner h1 {
-  font-size: 500%;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 15px #000;
+  color: #3D2462;
+      font-weight: 500;
+      margin: 0 0 20px;
+      padding: 0;
+      position: relative;
+      z-index: 1;
+      line-height: 40px;
+      font-size: 35px;
+      font-family: 'HCo Champion Middlewt';
 }
+span.color-teal {
+    color: #6E46AE;
+}
+
+
 .carousel-caption h3 {
   font-size: 200%;
   font-weight: 500 ;
@@ -144,14 +155,7 @@ hr.light-100{
   .carousel-caption{
     top: 45%;
   }
-  .carousel-inner h1 {
-    font-size: 350%;
-  }
-  .carousel-caption h3 {
-    font-size: 140%;
-    font-weight: 400 ;
-    padding-bottom: .2rem;
-  }
+
   .carousel-caption .btn{
     font-size: 95%;
     padding: 9px 14px;
@@ -168,12 +172,7 @@ hr.light-100{
   .carousel-caption{
     top: 40%;
   }
-  .carousel-inner h1 {
-    font-size: rgb(255, 0, 0);%;
-  }
-  .carousel-caption h3 {
-    font-size: 110%;
-  }
+
   .carousel-caption .btn{
     font-size: 90%;
     padding: 4px 8px;
