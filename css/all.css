@@ -7,6 +7,10 @@ font-family: 'Poppins',sans-serif;
 color: #222;
 
 }
+nav{
+color:  #32be8f;
+
+}
 .navbar{
   padding: .8rem;
 }
@@ -82,7 +86,14 @@ padding-top: 2rem;
 .fa-css3{
   color: #2163af;
 }
-.fa-code, .fa-bold,.fa-css3{
+.fa-python{
+  color: #05e305;
+}
+.fa-database{
+  color: #0C05E3;
+
+}
+.fa-database,.fa-python,.fa-code, .fa-bold,.fa-css3{
   font-size : 4em;
   margin : 1rem;
 }
