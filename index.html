@@ -50,7 +50,7 @@
 <body>
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<nav style="color: #FFF" class="navbar navbar-expand-md navbar-light bg-light sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"> <img src="img/logo1.png" style="height: 50px;width: : 60px" alt=""> </a>
 <button type="button" name="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
@@ -86,26 +86,51 @@
 <div class="carousel-caption">
 	<h1 class="display-2 text-left">Don't search for jobs.<br>
 		<span class="color-teal">Find the right fit</span> instead.</h1>
-		<section>
+
+
+
+    <section>
     <div class="container">
         <form action="#" method="post" novalidate="novalidate">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <input type="text" class="form-control search-slt" placeholder="Enter SKILL">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <span class="input-group-prepend">
+                                <div class="input-group-text bg-transparent border-right-0"><i class="fa fa-search"></i></div>
+                            </span>
+                            <input class="form-control py-2 border-left-0 border"  value="Titel or keyword" id="search-input">
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                          
-                            <input type="text" class="form-control search-slt" placeholder="Enter City">
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <span class="input-group-prepend">
+                                <div class="input-group-text bg-transparent border-right-0"><i class="fa fa-location-arrow"></i></div>
+                            </span>
+                            <input class="form-control py-2 border-left-0 border" value="Location ... " id="city-input">
                         </div>
-                        <button type="button" class="btn btn-outline-danger btn-lg" name="button">Search</button>
+
+                    </div>
+                    <div class="col-md-2">
+                      <button class="btn btn-outline-primary" type="button">
+                          Search
+                      </button>
+                    </div>
+</div>
+</div>
+</div>
+</form>
+</div>
                     </section>
+
+
+
 </div>
 	</div>
 </div>
 	</div>
-	</div>
+
 
 
 
