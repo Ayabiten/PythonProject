@@ -6,8 +6,8 @@
 
     <title>Votre profil</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=pd9u_PiT_yU6bQ8lk07R2cHefeO9UaEFN_uJsANr8I8GhNJBQBwuvdra4Q0hP1ozAIardR7xxQ2Ts6wZM6JLQw" charset="UTF-8"></script><style type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <style type="text/css">
     body{
     background: -webkit-linear-gradient(left, #3931af, #00c6ff);
 }
@@ -103,30 +103,17 @@
     font-weight: 600;
     color: #0062cc;
 }    </style>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        window.alert = function(){};
-        var defaultCSS = document.getElementById('bootstrap-css');
-        function changeCSS(css){
-            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
-            else $('head > link').filter(':first').replaceWith(defaultCSS); 
-        }
-        $( document ).ready(function() {
-          var iframe_height = parseInt($('html').height()); 
-          window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
-        });
-    </script>
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
     <script type="text/javascript">
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
-
                 reader.onload = function (e) {
                     $('#blah')
                         .attr('src', e.target.result);
                 };
-
                 reader.readAsDataURL(input.files[0]);
             }
         }
@@ -138,7 +125,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
-                            <img id="blah"  />
+                            <img id="blah" src="img/Candidat.png"  />
                             <div class="file btn btn-lg btn-primary">
                                 Change Photo
                                 <input type='file' onchange="readURL(this);" />
@@ -278,7 +265,7 @@
                         </div>
                     </div>
                 </div>
-            </form>           
+            </form>
         </div>  <script type="text/javascript">
         </script>
 </body>
