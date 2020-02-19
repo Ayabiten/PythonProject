@@ -23,5 +23,7 @@ urlpatterns = [
     path('index/', views.accueil),
     path('', views.index),
     path('ContactUs/', views.Contactus),
+    path('Profile/', views.Profile),
+    path('formulaire/', views.formulaire),
     path('admin/', admin.site.urls)
     ]

@@ -13,3 +13,9 @@ def accueil(request):
 
 def Contactus(request):
     return render(request, 'ContactUs.html')
+
+def Profile(request):
+    return render(request, 'profile.html')
+
+def formulaire(request):
+    return render(request, 'formulaire.html')
