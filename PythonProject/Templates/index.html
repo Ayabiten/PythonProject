@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> MCSC job</title>
+	<link rel="stylesheet" href=" {% static 'css/bootstrap.min.css' %}" >
+  <link  rel="stylesheet" type="text/css"  href="{% static 'css/all.css' %}" >
+
+	<style type="text/css">
+
+.search-slt{
+    display: block;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+.wrn-btn{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 200;
+    text-transform: capitalize;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+@media (min-width: 500px){
+    .search-sec{
+        position: relative;
+        top: -114px;
+        background: rgba(26, 70, 104, 0.51);
+    }
+}
+
+@media (max-width: 500px){
+    .search-sec{
+        background: #1A4668;
+    }
+}
+	</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav style="color: #FFF" class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"> <img src="{% static 'img/logo1.png' %}" style="height: 50px;width: : 60px" alt=""> </a>
+<button type="button" name="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+<a href="#" class="nav-link">HOME</a>
+    </li>  <li class="nav-item">
+  <a href="/Signup" class="nav-link">sign up</a>
+      </li>  <li class="nav-item">
+    <a href="/login" class="nav-link">sign in</a>
+        </li>  <li class="nav-item">
+      <a href="/ContactUs" class="nav-link">Contactus</a>
+          </li>
+  </ul>
+
+</div>
+  </div>
+</nav>
+
+<!--- Image Slider -->
+<div id="slides" class="carousel slide" data-ride="carousel">
+	<ul class="carousel-indicators">
+		<li data-target="#slides" data-slide-to="0" class="active"></li>
+		<li data-target="#slides" data-slide-to="1"></li>
+		<li data-target="#slides" data-slide-to="2"></li>
+	</ul>
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img src=" {% static 'img/bg.png' %}" >
+<div class="carousel-caption">
+	<h1 class="display-2 text-left">Don't search for jobs.<br>
+		<span class="color-teal">Find the right fit</span> instead.</h1>
+
+
+
+    <section>
+    <div class="container">
+        <form action="#" method="post" novalidate="novalidate">
+            <div class="row">
+                <div class="col-lg-12">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <span class="input-group-prepend">
+                                <div class="input-group-text bg-transparent border-right-0"><i class="fa fa-search"></i></div>
+                            </span>
+                            <input class="form-control py-2 border-left-0 border"  value="Titel or keyword" id="search-input">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <span class="input-group-prepend">
+                                <div class="input-group-text bg-transparent border-right-0"><i class="fa fa-location-arrow"></i></div>
+                            </span>
+                            <input class="form-control py-2 border-left-0 border" value="Location ... " id="city-input">
+                        </div>
+
+                    </div>
+                    <div class="col-md-2">
+                      <button class="btn btn-outline-primary" type="button">
+                          Search
+                      </button>
+                    </div>
+</div>
+</div>
+</div>
+</form>
+</div>
+                    </section>
+
+
+
+</div>
+	</div>
+</div>
+	</div>
+
+
+
+
+<!--- Welcome Section -->
+<div class="container-fluid padding">
+	<div class="row welcome text-center">
+			<div class="col-12">
+				<h1 class="display-4">Built with :</h1>
+			</div>
+<hr>
+<div class="col-12">
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop</p>
+</div>
+	</div>
+</div>
+
+<!--- Three Column Section -->
+<div class="container-fluid padding">
+	<div class="row text-center padding">
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fas fa-code"></i>
+			<h3>HTML5</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fas fa-bold"></i>
+			<h3>Bootstrap 4</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fab fa-css3"></i>
+			<h3>CSS 3</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing</p>
+		</div>
+
+	</div>
+	<hr class="my-4">
+</div>
+<!--- Three Column Section -->
+<div class="container-fluid padding">
+	<div class="row text-center padding">
+		<div class="col-xs-12 col-sm-6 col-md-4">
+<i class="fab fa-python" style="color: #05e305;font-size : 4em;margin : 1rem;"></i>
+			<h3>Python</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<img src="{% static 'img/dj.png' %}" style="height: 50%; width: 20%" alt="">
+			<h3>Django</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-4">
+<i class="fas fa-database" style="color: #0C05E3;font-size : 4em;margin : 1rem;"></i>
+			<h3>SQLIte</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing</p>
+		</div>
+
+	</div>
+	<hr class="my-4">
+</div>
+
+<!--- Two Column Section -->
+<div class="container-fluid padding">
+	<div class="row padding">
+		<div class="col-lg-6">
+			<h2>What is Lorem Ipsum?</h2>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+
+			<br>
+			<a href="#" class="btn btn-primary">Learn More</a>
+		</div>
+		<div class="col-lg-6">
+			<img src="{% static 'img/desk.png' %}" class="img-fluid" alt="">
+		</div>
+	</div>
+</div>
+<hr class="my-4">
+<!--- Fixed background -->
+<figure>
+	<div class="fixed-wrap">
+		<div id="fixed" class="fixed">
+
+		</div>
+	</div>
+</figure>
+
+
+
+<!--- Meet the team -->
+
+<div class="container-fluid padding">
+	<div class="row welcome text-center">
+		<div class="col-12">
+			<h1 class="display-4"> Meet the team</h1>
+		</div>
+		<hr>
+	</div>
+</div>
+<!--- Cards -->
+<div class="container-fluid padding ">
+	<div class="row">
+	  <div class="col-sm-4">
+	    <div class="card">
+				<img src="{% static 'img/team1.png' %}" class="card-img-top" alt="">
+	      <div class="card-body">
+	        <h5 class="card-title">Achraf Iabiten</h5>
+	        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+	        <a href="#" class="btn btn-outline-secondary">See Profile</a>
+	      </div>
+	    </div>
+	  </div>
+		<div class="col-sm-4">
+	    <div class="card">
+				<img src="{% static 'img/Candidat.png' %}" class="card-img-top" style="height: 20rem;" alt="">
+	      <div class="card-body">
+	        <h5 class="card-title">Nihal Akerdad</h5>
+	        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+	        <a href="#" class="btn btn-outline-secondary">See Profile</a>
+	      </div>
+	    </div>
+	  </div>
+		<div class="col-sm-4">
+			<div class="card">
+				<img src="{% static 'img/Candidat.png' %}" class="card-img-top" style="height: 20rem;" alt="">
+				<div class="card-body">
+					<h5 class="card-title">Zineb Louzi</h5>
+					<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+					<a href="#" class="btn btn-outline-secondary">See Profile</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+</div>
+
+<!--- Two Column Section -->
+
+
+<!--- Connect -->
+<div class="container-fluid padding">
+	<div class="row text-center padding">
+
+<div class="col-12">
+<h2>Connect</h2>
+</div>
+<div class="col-12 social padding">
+	<a href="#"> <i class="fab fa-facebook"></i>  </a>
+	<a href="#"> <i class="fab fa-twitter"></i>  </a>
+	<a href="#"> <i class="fab fa-instagram"></i>  </a>
+	<a href="#"> <i class="fab fa-youtube"></i>  </a>
+	<a href="#"> <i class="fab fa-linkedin"></i>  </a>
+</div>
+
+
+	</div>
+</div>
+
+<!--- Footer -->
+<footer>
+<div class="container-fluid padding">
+	<div class="row text-center">
+<div class="col-md-4">
+	<hr class="light">
+<img src="{% static 'img/logo1.png' %}" style="height: 50px;width: : 60px" alt="">
+	<hr class="light">
+	<p>+212654873246</p>
+	<p>Test@test.com</p>
+	<p>23 Rue airfan 1</p>
+	<p>Tanger , Maroc</p>
+
+</div>
+<div class="col-md-4">
+	<hr class="light">
+	<h5>Our Site :</h5>
+	<hr class="light">
+	<p>Lorem Ipsum is simply dummy text </p>
+	<p>Lorem Ipsum is simply dummy text </p>
+	<p>Lorem Ipsum is simply dummy text </p>
+</div>
+<div class="col-md-4">
+	<hr class="light">
+	<h5>Our Site :</h5>
+	<hr class="light">
+	<p>Lorem Ipsum is simply dummy text </p>
+	<p>Lorem Ipsum is simply dummy text </p>
+	<p>Lorem Ipsum is simply dummy text </p>
+</div>
+
+<div class="col-12">
+	<hr class="light">
+	<h5>&copy; MCSCC</h5>
+</div>
+	</div>
+</div>
+
+
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</body>
+</html>
