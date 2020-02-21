@@ -58,7 +58,7 @@ TEMPLATE_DIRS = (
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['D:\downloads\www\PythonProject\PythonProject\Templates'],
+        'DIRS': [r'C:\xampp\htdocs\PythonProject\PythonProject\Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -129,4 +129,5 @@ STATICFILES_DIRS = (
   os.path.join(BASE_DIR, 'static/'),
 )
 #STATIC_ROOT = 'C:/xampp/htdocs/PythonProject/PythonProject/static'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/index/'
+LOGOUT_REDIRECT_URL = '/'
