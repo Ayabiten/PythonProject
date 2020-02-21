@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'PythonProject.Templates.ARV.apps',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,7 @@ TEMPLATE_DIRS = (
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:\\xampp\htdocs\PythonProject\PythonProject\Templates'],
+        'DIRS': ['D:\downloads\www\PythonProject\PythonProject\Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,3 +129,4 @@ STATICFILES_DIRS = (
   os.path.join(BASE_DIR, 'static/'),
 )
 #STATIC_ROOT = 'C:/xampp/htdocs/PythonProject/PythonProject/static'
+LOGIN_REDIRECT_URL = '/'

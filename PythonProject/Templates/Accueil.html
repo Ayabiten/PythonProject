@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    {% load static %}
     <meta charset="utf-8">
-    <link rel="stylesheet" href=" {% static 'css/bootstrap.min.css' %}" >
-    <title></title>
+        {% load static %}
+
+  <link rel="stylesheet"  href="{% static 'css/bootstrap.min.css' %}">
+  <link  rel="stylesheet" type="text/css"  href="{% static 'css/all.css' %}" >
+
 		<style media="screen">
 		#bg {
 			height: 180px;
-			background-image: url(" {% static 'img/bg_search.jpg' %}");
+			background-image: url("{% static 'img/bg_search.jpg' %}");
 			background-repeat: no-repeat;
 			background-attachment: fixed;
 			background-size: cover;
@@ -18,112 +20,35 @@
 		</style>
   </head>
   <body>
-		<!-- Navigation -->
-    <nav style="color: #FFF" class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"> <img src="{% static 'img/logo1.png' %}" style="height: 50px;width: : 60px" alt=""> </a>
-    <button type="button" name="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-    <a href="#" class="nav-link">HOME</a>
+<!-- Navigation -->
+<nav style="color: #FFF" class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"> <img src="{% static 'img/logo1.png' %}" style="height: 50px;width: : 60px" alt=""> </a>
+<button type="button" name="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+<a href="/" class="nav-link">HOME</a>
+    </li>  <li class="nav-item">
+  <a href="/Signup/" class="nav-link">sign up</a>
+      </li>  <li class="nav-item">
+    <a href="/login/" class="nav-link">sign in</a>
         </li>  <li class="nav-item">
-      <a href="/Signup" class="nav-link">sign up</a>
-          </li>  <li class="nav-item">
-        <a href="/login" class="nav-link">sign in</a>
-            </li>  <li class="nav-item">
-          <a href="/ContactUs" class="nav-link">Contactus</a>
-              </li>
-      </ul>
+      <a href="#" class="nav-link">Contact</a>
+          </li>
+  </ul>
 
-    </div>
-      </div>
-    </nav>
+</div>
+  </div>
+</nav>
 		<!-- Pic fixed -->
 <div id="bg" class=" text-center" >
 	<br><br><br>
 <h2 style="color:white">Votre expérience commence ici ...</h2>
 </div>
-<!-- filter -->
-<div class="card" style="height: 51% ">
-	<div class="card-body">
-	<div class="btn-group">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Action
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Separated link</a>
-  </div>
-</div>
 
-
-<div class="btn-group">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Action
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Separated link</a>
-  </div>
-</div>
-
-
-<div class="btn-group">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Action
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Separated link</a>
-  </div>
-</div>
-
-
-<div class="btn-group">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Action
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Separated link</a>
-  </div>
-</div>
-
-<div class="btn-group">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Action
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Separated link</a>
-  </div>
-</div>
-
-<div class="float-right btn-group">
-  <button type="button" class="btn btn-light">
-    Action
-  </button>
-</div>
-</div>
-</div>
 
 
 
@@ -132,125 +57,178 @@
 
 <div class="container">
 
-    <div class="row">
+  <div class="row">
 
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="{% static 'img/img.jpg' %}" alt="programmation">
-          <div class="caption">
-            <h3>Programmer</h3>
-            <p>Découvrez la joie de la programmation du php au java en passant par le C.</p>
-            <p class="text-right">
-            <a href="#" class="btn btn-primary" role="button">Détail</a> </p>
-
-          </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="{% static 'img/img1.jpg' %}" style="width:100%" alt="programmation">
+        <div class="caption">
+        <a href="#"> <h3 class="text-uppercase text-center">Programmer</h3></a>
+          <p class="text-center text-uppercase">Casablanca,Morocco</p>
+          <p class="text-center">Découvrez la joie de la programmation du php au java en passant par le C.</p>
         </div>
       </div>
-
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="{% static 'img/img1.jpg' %}" alt="framework php">
-          <div class="caption">
-            <h3>Framework PHP</h3>
-            <p>Vous voulez développer efficacement avec PHP, utiliser un Framework</p>
-            <p class="text-right"><a href="#" class="btn btn-primary" role="button">Détail</a> </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="{% static 'img/img.jpg' %}" alt="Framework javascript">
-          <div class="caption">
-            <h3>Framework JS</h3>
-            <p>Technologie du moment! Apprendre un Framewok JS est indisponsable</p>
-            <p class="text-right"><a href="#" class="btn btn-primary" role="button">Détail</a> </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="{% static 'img/img3.jpg' %}" alt="ERP">
-          <div class="caption">
-            <h3>ERP</h3>
-            <p>Vos applications de gestion d'entreprise. De la gestion de caisse au RH</p>
-            <p class="text-right"><a href="#" class="btn btn-primary" role="button">Détail</a> </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="{% static 'img/img1.jpg' %}" alt="Sytème de gestion de contenu">
-          <div class="caption">
-            <h3>CMS</h3>
-            <p>Créer un site web en trois click, il suffit d'utiliser un CMS</p>
-            <p class="text-right">
-            <a href="#" class="btn btn-primary" role="button">Détail</a>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="{% static 'img/img3.jpg' %}" alt="Logiciel de développement">
-          <div class="caption">
-            <h3>Logiciel</h3>
-            <p>Pour développer il faut des outils. Explorer vos logiciels préférés!</p>
-            <p class="text-right"><a href="#" class="btn btn-primary" role="button">Détail</a> </p>
-          </div>
-        </div>
-      </div>
-
     </div>
+
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="{% static 'img/img1.jpg' %}" style="width:100%" alt="framework php">
+        <div class="caption">
+      <a href="#">   <h3 class="text-uppercase text-center">Framework PHP</h3></a>
+          <p class="text-center text-uppercase">Rabat,Morroco</p>
+          <p class="text-center ">Vous voulez développer efficacement avec PHP, utiliser un Framework</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="{% static 'img/img1.jpg' %}" style="width:100%" alt="Framework javascript">
+        <div class="caption">
+        <a href="#">  <h3 class="text-uppercase text-center">Framework JS</h3></a>
+          <p class="text-center text-uppercase">Rabat,Morroco</p>
+          <p class="text-center ">Vous voulez développer efficacement avec PHP, utiliser un Framework</p>
+
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <hr>
+  <div class="row">
+
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="{% static 'img/img1.jpg' %}" style="width:100%" alt="programmation">
+        <div class="caption">
+          <a href="#"> <h3 class="text-uppercase text-center">Programmer</h3></a>
+          <p class="text-center text-uppercase">Casablanca,Morocco</p>
+          <p class="text-center">Découvrez la joie de la programmation du php au java en passant par le C.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="{% static 'img/img1.jpg' %}" style="width:100%" alt="framework php">
+        <div class="caption">
+        <a href="#">  <h3 class="text-uppercase text-center">Framework PHP</h3></a>
+          <p class="text-center text-uppercase">Rabat,Morroco</p>
+          <p class="text-center ">Vous voulez développer efficacement avec PHP, utiliser un Framework</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="{% static 'img/img1.jpg' %}" style="width:100%" alt="Framework javascript">
+        <div class="caption">
+        <a href="#"> <h3 class="text-uppercase text-center">Framework JS</h3></a>
+          <p class="text-center text-uppercase">Rabat,Morroco</p>
+          <p class="text-center ">Vous voulez développer efficacement avec PHP, utiliser un Framework</p>
+
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+  <hr>
+  <div class="row">
+
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="{% static 'img/img1.jpg' %}" style="width:100%" alt="programmation">
+        <div class="caption">
+        <a href="#"> <h3 class="text-uppercase text-center">Programmer</h3></a>
+          <p class="text-center text-uppercase">Casablanca,Morocco</p>
+          <p class="text-center">Découvrez la joie de la programmation du php au java en passant par le C.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="{% static 'img/img1.jpg' %}" style="width:100%" alt="framework php">
+        <div class="caption">
+      <a href="#">   <h3 class="text-uppercase text-center">Framework PHP</h3></a>
+          <p class="text-center text-uppercase">Rabat,Morroco</p>
+          <p class="text-center ">Vous voulez développer efficacement avec PHP, utiliser un Framework</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="{% static 'img/img1.jpg' %}" style="width:100%" alt="Framework javascript">
+        <div class="caption">
+        <a href="#">  <h3 class="text-uppercase text-center">Framework JS</h3></a>
+          <p class="text-center text-uppercase">Rabat,Morroco</p>
+          <p class="text-center ">Vous voulez développer efficacement avec PHP, utiliser un Framework</p>
+
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <hr>
 </div>
 
 <!--- Footer -->
 <footer>
 <div class="container-fluid padding">
-	<div class="row text-center">
+  <div class="row text-center">
 <div class="col-md-4">
-	<hr class="light">
+  <hr class="light">
 <img src="{% static 'img/logo1.png' %}" style="height: 50px;width: : 60px" alt="">
-	<hr class="light">
-	<p>+212654873246</p>
-	<p>Test@test.com</p>
-	<p>23 Rue airfan 1</p>
-	<p>Tanger , Maroc</p>
+  <hr class="light">
+  <p>+212654873246</p>
+  <p>Test@test.com</p>
+  <p>23 Rue airfan 1</p>
+  <p>Tanger , Maroc</p>
 
 </div>
 <div class="col-md-4">
-	<hr class="light">
-	<h5>Our Site :</h5>
-	<hr class="light">
-	<p>Lorem Ipsum is simply dummy text </p>
-	<p>Lorem Ipsum is simply dummy text </p>
-	<p>Lorem Ipsum is simply dummy text </p>
+  <hr class="light">
+  <h5>Our Site :</h5>
+  <hr class="light">
+  <p>Lorem Ipsum is simply dummy text </p>
+  <p>Lorem Ipsum is simply dummy text </p>
+  <p>Lorem Ipsum is simply dummy text </p>
 </div>
 <div class="col-md-4">
-	<hr class="light">
-	<h5>Our Site :</h5>
-	<hr class="light">
-	<p>Lorem Ipsum is simply dummy text </p>
-	<p>Lorem Ipsum is simply dummy text </p>
-	<p>Lorem Ipsum is simply dummy text </p>
+  <hr class="light">
+  <h5>Our Site :</h5>
+  <hr class="light">
+  <p>Lorem Ipsum is simply dummy text </p>
+  <p>Lorem Ipsum is simply dummy text </p>
+  <p>Lorem Ipsum is simply dummy text </p>
 </div>
 
 <div class="col-12">
-	<hr class="light">
-	<h5>&copy; MCSCC</h5>
+  <hr class="light">
+  <h5>&copy; MCSCC</h5>
 </div>
-	</div>
+  </div>
 </div>
 
 
 </footer>
 
 
-    <script src="{% static 'js/jquery-3.4.1.slim.min.js' %}" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="{% static 'js/bootstrap.min.js' %} " ></script>
-  </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</body>
 </html>

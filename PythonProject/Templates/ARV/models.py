@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import admin
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 class Candidat(models.Model):
     id_C = models.AutoField(primary_key=True)
