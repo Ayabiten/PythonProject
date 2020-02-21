@@ -14,8 +14,8 @@ def index(request):
 def accueil(request):
     return render(request, 'Accueil.html')
 
-def Contactus(request):
-    return render(request, 'ContactUs.html')
+def about(request):
+    return render(request, 'about.html')
 
 def Profile(request):
     return render(request, 'profile.html')
