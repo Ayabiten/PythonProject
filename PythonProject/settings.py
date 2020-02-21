@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'PythonProject.Templates.ARV.apps',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,4 @@ STATICFILES_DIRS = (
   os.path.join(BASE_DIR, 'static/'),
 )
 #STATIC_ROOT = 'C:/xampp/htdocs/PythonProject/PythonProject/static'
+LOGIN_REDIRECT_URL = '/'
