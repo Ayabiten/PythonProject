@@ -20,45 +20,7 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">    
   </head>
-<<<<<<< HEAD
   <body id="top">
-=======
-  <body>
-<!-- Navigation -->
-<nav style="color: #FFF" class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"> <img src="{% static 'img/logo1.png' %}" style="height: 50px;width: : 60px" alt=""> </a>
-<button type="button" name="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarResponsive">
-  <ul class="navbar-nav ml-auto">
-    <li class="nav-link"><a href="/Accueil/" >Home</a></li> 
-	<li class="nav-link"><a href="/index/">Offres</a></li>
-	<li class="nav-link"><a href="/about/">Services</a></li> 
-	{% if user.is_authenticated %}
-		<li class="nav-link"><a href="/Profile/">Mon Compte</a></li> 
-		<li class="nav-link"><a href="/accounts/logout">Logout</a></li>  
-	{% else %}
-		<li class="nav-link"><a href="/accounts/login/">Login</a></li>	
-	{% endif %}
-   <!--<a href="#" class="nav-link">sign up</a>
-      </li>  <li class="nav-item">
-    <a href="#" class="nav-link">sign in</a>
-        </li>  -->
-	
-  </ul>
-</div>
-  </div>
-</nav>
-		<!-- Pic fixed -->
-<div id="bg" class=" text-center" >
-	<br><br><br>
-<h2 style="color:white">Votre expérience commence ici ...</h2>
-</div>
-
-
->>>>>>> 5ac9739a94ac233f07bf5c9044071697e509e5b1
 
   
     

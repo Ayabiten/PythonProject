@@ -1,45 +1,53 @@
-
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<!doctype html>
 <html lang="en">
-  <head>
-    <title>JobBoard &mdash; Website Template by Colorlib</title>
-    <meta charset="utf-8">
-        {% load static %}
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		{% load static %}
 
-  <link rel="stylesheet"  href="{% static 'css/bootstrap.min.css' %}">
+	<title> MCSC job</title>
+	<link rel="stylesheet"  href="{% static 'css/bootstrap.min.css' %}">
   <link  rel="stylesheet" type="text/css"  href="{% static 'css/all.css' %}" >
 
-		<style media="screen">
-		#bg {
-			height: 180px;
-			background-image: url("{% static 'img/bg_search.jpg' %}");
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			background-size: cover;
-			background-size: 100%;
-			background-position: center;
-		}
-		</style>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {% load static %}
-    
-    <link rel="stylesheet" href="{% static 'css/custom-bs.css' %}">
-    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/bootstrap-select.min.css' %}">
-    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
-    <link rel="stylesheet" href="{% static 'fonts/line-icons/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/quill.snow.css' %}">
-    
+	<style type="text/css">
 
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">    
-  </head>
-  <body>
+.search-slt{
+    display: block;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+.wrn-btn{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 200;
+    text-transform: capitalize;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+@media (min-width: 500px){
+    .search-sec{
+        position: relative;
+        top: -114px;
+        background: rgba(26, 70, 104, 0.51);
+    }
+}
+
+@media (max-width: 500px){
+    .search-sec{
+        background: #1A4668;
+    }
+}
+	</style>
+</head>
+<body>
+
 <!-- Navigation -->
 <nav style="color: #FFF" class="navbar navbar-expand-md navbar-light bg-light sticky-top">
   <div class="container-fluid">
@@ -65,344 +73,265 @@
 </div>
   </div>
 </nav>
-		<!-- Pic fixed -->
-<div id="bg" class=" text-center" >
-	<br><br><br>
-<h2 style="color:white">Votre expérience commence ici ...</h2>
+
+<!--- Image Slider -->
+<div id="slides" class="carousel slide" data-ride="carousel">
+	<ul class="carousel-indicators">
+		<li data-target="#slides" data-slide-to="0" class="active"></li>
+		<li data-target="#slides" data-slide-to="1"></li>
+		<li data-target="#slides" data-slide-to="2"></li>
+	</ul>
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img src="{% static 'img/bur.jpg' %}" >
+<div class="carousel-caption">
+	<h1 class="display-4 text-left "><br>
+	<h1 class="display-4 text-left ">		Don't search for jobs.<br>
+		<span class="color-teal text-left">		Find the right fit</span> instead.</h1>
+
+
+<!--
+    <section>
+    <div class="container">
+        <form action="#" method="post" novalidate="novalidate">
+            <div class="row">
+                <div class="col-lg-12">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <span class="input-group-prepend">
+                                <div class="input-group-text bg-transparent border-right-0"><i class="fa fa-search"></i></div>
+                            </span>
+                            <input class="form-control py-2 border-left-0 border"  value="Titel or keyword" id="search-input">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <span class="input-group-prepend">
+                                <div class="input-group-text bg-transparent border-right-0"><i class="fa fa-location-arrow"></i></div>
+                            </span>
+                            <input class="form-control py-2 border-left-0 border" value="Location ... " id="city-input">
+                        </div>
+
+                    </div>
+                    <div class="col-md-2">
+                      <button class="btn btn-outline-primary" type="button">
+                          Search
+                      </button>
+                    </div>
+</div>
+</div>
+</div>
+</form>
+</div>
+                    </section>
+-->
+
+
+</div>
+	</div>
+</div>
+	</div>
+
+
+
+
+<!--- Welcome Section
+<div class="container-fluid padding">
+	<div class="row welcome text-center">
+			<div class="col-12">
+				<h1 class="display-4">Notre service</h1>
+			</div>
+<hr>
+<div class="col-12">
+	<p>Après la fin du CV papier, bientôt celle de l'entretien d'embauche ? Une nouvelle formule remporte de plus en plus de succès auprès des recruteurs : les rendez-vous virtuels.<br>
+
+Miracle de la technologie… Vous n'aurez bientôt plus besoin de vous déplacer pour passer un entretien de recrutement. Tout peut désormais se passer par ordinateurs interposés. Pierrick Rocher, directeur général du cabinet de conseil, Amaris Paris (management, systèmes d'information et ingénierie) est un adepte de la nouvelle plateforme Job rendezvous.com. Il suffit de poster une annonce, pré-sélectioner des candidats et de prendre rendez-vous pour une discussion par webcam. "J'effectue ainsi un premier tri tout en ayant un contact physique avec le candidat. Je peux voir ses réacions, étudier sa gestuelle", explique-t-il.</p>
+</div>
+	</div>
+</div>
+ -->
+<!--- Three Column Section 
+<div class="container-fluid padding">
+	<div class="row text-center padding">
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fas fa-code"></i>
+			<h3>HTML5</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fas fa-bold"></i>
+			<h3>Bootstrap 4</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fab fa-css3"></i>
+			<h3>CSS 3</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing</p>
+		</div>
+
+	</div>
+	<hr class="my-4">
+</div>
+<!--- Three Column Section
+<div class="container-fluid padding">
+	<div class="row text-center padding">
+		<div class="col-xs-12 col-sm-6 col-md-4">
+<i class="fab fa-python" style="color: #05e305;font-size : 4em;margin : 1rem;"></i>
+			<h3>Python</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<img src="{% static 'img/dj.png' %}" style="height: 50%; width: 20%" alt="">
+			<h3>Django</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-4">
+<i class="fas fa-database" style="color: #0C05E3;font-size : 4em;margin : 1rem;"></i>
+			<h3>SQLIte</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing</p>
+		</div>
+
+	</div>
+	<hr class="my-4">
+</div>-->
+
+<!--- Two Column Section -->
+<div class="container-fluid padding">
+	<div class="row padding">
+		<div class="col-lg-6">
+			<h2>Qui sommes nous?</h2>
+			<p>L’univers virtuel MCSC Job pourvoyeur de talents ? Pourquoi pas ? De grandes entreprises marocaines ont décidé de trouver de nouveaux talents dans le célèbre univers virtuel. </p>
+			<p>Le principe est exactement le même que dans la réalité. Dans ces e-évènements, le candidat se crée un avatar (personnage fictif) et se balade entre les stands des entreprises présentes. Il peut entrer en contact avec les recruteurs via un système de chat ou par caméra interposée.</p>
+
+			<br>
+			<!--<a href="#" class="btn btn-primary">Learn More</a>-->
+		</div>
+		<div class="col-lg-6">
+			<img src="{% static 'img/desk.png' %}" class="img-fluid" alt="">
+		</div>
+	</div>
+</div>
+<hr class="my-4">
+<!--- Fixed background -->
+<figure>
+	<div class="fixed-wrap">
+		<div id="fixed" class="fixed">
+
+		</div>
+	</div>
+</figure>
+
+
+
+<!--- Meet the team -->
+
+<div class="container-fluid padding">
+	<div class="row welcome text-center">
+		<div class="col-12">
+			<h1 class="display-4"> Meet the team</h1>
+		</div>
+		<hr>
+	</div>
+</div>
+<!--- Cards -->
+<div class="container-fluid padding ">
+	<div class="row">
+	  <div class="col-sm-4">
+	    <div class="card">
+				<img src="{% static 'img/yabi.jpg' %}" class="card-img-top" style="height: 20rem;" alt="">
+	      <div class="card-body">
+	        <h5 class="card-title">Achraf Iabiten</h5>
+	        <p class="card-text">Developpeur Core Senior</p>
+	        <!--<a href="#" class="btn btn-outline-secondary">See Profile</a>-->
+	      </div>
+	    </div>
+	  </div>
+		<div class="col-sm-4">
+	    <div class="card">
+				<img src="{% static 'img/nihal.jpg' %}" class="card-img-top" style="height: 20rem;" alt="">
+	      <div class="card-body">
+	        <h5 class="card-title">Nihal Akerdad</h5>
+	        <p class="card-text">Architecte Cybersécurité</p>
+	         <!--<a href="#" class="btn btn-outline-secondary">See Profile</a>-->
+	      </div>
+	    </div>
+	  </div>
+		<div class="col-sm-4">
+			<div class="card">
+				<img src="{% static 'img/zineb.jpg' %}" class="card-img-top" style="height: 20rem;" alt="">
+				<div class="card-body">
+					<h5 class="card-title">Zineb Louzi</h5>
+					<p class="card-text">Expert Cybersécurité</p>
+					 <!--<a href="#" class="btn btn-outline-secondary">See Profile</a>-->
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+</div>
+
+<!--- Two Column Section -->
+
+
+<!--- Connect -->
+<div class="container-fluid padding">
+	<div class="row text-center padding">
+
+<div class="col-12">
+<h2>Connect</h2>
+</div>
+<div class="col-12 social padding">
+	<a href="#"> <i class="fab fa-facebook"></i>  </a>
+	<a href="#"> <i class="fab fa-twitter"></i>  </a>
+	<a href="#"> <i class="fab fa-instagram"></i>  </a>
+	<a href="#"> <i class="fab fa-youtube"></i>  </a>
+	<a href="#"> <i class="fab fa-linkedin"></i>  </a>
 </div>
 
 
-  <body id="top">
-
-  
-    
-
-<br>
-<!-- job resultat -->
-<div class="site-wrap">
-
-<div class="container">
-
-  <div class="row">
-
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="{% static 'img/img1.jpg' %}" style="width:100%" alt="programmation">
-        <div class="caption">
-        <a href="#"> <h3 class="text-uppercase text-center">Programmer</h3></a>
-          <p class="text-center text-uppercase">Casablanca,Morocco</p>
-          <p class="text-center">Découvrez la joie de la programmation du php au java en passant par le C.</p>
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="{% static 'img/img1.jpg' %}" style="width:100%" alt="framework php">
-        <div class="caption">
-      <a href="#">   <h3 class="text-uppercase text-center">Framework PHP</h3></a>
-          <p class="text-center text-uppercase">Rabat,Morroco</p>
-          <p class="text-center ">Vous voulez développer efficacement avec PHP, utiliser un Framework</p>
-      <div class="site-mobile-menu-body"></div>
-    </div> <!-- .site-mobile-menu -->
-    
-
-    <!-- NAVBAR -->
-    <header class="site-navbar mt-3">
-      <div class="container-fluid">
-        <div class="row align-items-center">
-          <div class="site-logo col-6"><a href="index.html">MCSC JOB</a></div>
-
-          <nav class="mx-auto site-navigation">
-            <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
-              <li><a href="index.html" class="nav-link">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li class="has-children">
-                
-                <ul class="dropdown">
-                  
-                  <li><a href="post-job.html">Post a Job</a></li>
-                </ul>
-              </li>
-              <li><a href="blog.html" class="active">Blog</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li class="d-lg-none"><a href="post-job.html"><span class="mr-2">+</span> Post a Job</a></li>
-              <li class="d-lg-none"><a href="login.html">Log In</a></li>
-            </ul>
-          </nav>
-          
-          <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
-            <div class="ml-auto">
-              <a href="post-job.html" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Post a Job</a>
-              <a href="login.html" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-lock_outline"></span>Log In</a>
-            </div>
-            <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="{% static 'img/img1.jpg' %}" style="width:100%" alt="Framework javascript">
-        <div class="caption">
-        <a href="#">  <h3 class="text-uppercase text-center">Framework JS</h3></a>
-          <p class="text-center text-uppercase">Rabat,Morroco</p>
-          <p class="text-center ">Vous voulez développer efficacement avec PHP, utiliser un Framework</p>
-
-    </header>
-
-    <!-- HOME -->
-    <section class="section-hero overlay inner-page bg-image" style="background-image: url('images/hero_1.jpg');" id="home-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-7">
-            <h1 class="text-white font-weight-bold">Les offres</h1>
-            <div class="custom-breadcrumbs">
-              <a href="#">Home</a> <span class="mx-2 slash">/</span>
-              <span class="text-white"><strong>About Us</strong></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-  </div>
-
-  <hr>
-  <div class="row">
-
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="{% static 'img/img1.jpg' %}" style="width:100%" alt="programmation">
-        <div class="caption">
-          <a href="#"> <h3 class="text-uppercase text-center">Programmer</h3></a>
-          <p class="text-center text-uppercase">Casablanca,Morocco</p>
-          <p class="text-center">Découvrez la joie de la programmation du php au java en passant par le C.</p>
-    </section>
-
-    <section class="site-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md-6 col-lg-4 mb-5">
-            <a href="jobsingle.html"><img src="{% static 'images/1.jpg' %}" alt="Image" class="img-fluid rounded mb-4"></a>
-            <h3><a href="blog-single.html" class="text-black">Programmer</a></h3>
-            <div>Casablanca,Morocco <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <a href="jobsingle.html"><img src="{% static 'images/2.jpg' %}" alt="Image" class="img-fluid rounded mb-4"></a>
-            <h3><a href="blog-single.html" class="text-black">Framework PHP</a></h3>
-            <div>Rabat,Morroco <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <a href="jobsingle.html"><img src="{% static 'images/3.jpg' %}" alt="Image" class="img-fluid rounded mb-4"></a>
-            <h3><a href="blog-single.html" class="text-black">Framework JS</a></h3>
-            <div>Rabat,Morroco <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <a href="jobsingle.html"><img src="{% static 'images/4.jpg' %}" alt="Image" class="img-fluid rounded mb-4"></a>
-            <h3><a href="blog-single.html" class="text-black">Framework JS</a></h3>
-            <div>Tangier,Morroco <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <a href="jobsingle.html"><img src="{% static 'images/5.jpg' %}" alt="Image" class="img-fluid rounded mb-4"></a>
-            <h3><a href="blog-single.html" class="text-black">Developpeur</a></h3>
-            <div>Laarache,Morroco <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <a href="jobsingle.html"><img src="{% static 'images/6.jpg' %}" alt="Image" class="img-fluid rounded mb-4"></a>
-            <h3><a href="blog-single.html" class="text-black">Developpeur Django</a></h3>
-            <div>Meknes,Morroco <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="{% static 'img/img1.jpg' %}" style="width:100%" alt="framework php">
-        <div class="caption">
-        <a href="#">  <h3 class="text-uppercase text-center">Framework PHP</h3></a>
-          <p class="text-center text-uppercase">Rabat,Morroco</p>
-          <p class="text-center ">Vous voulez développer efficacement avec PHP, utiliser un Framework</p>
-
-        <div class="row pagination-wrap mt-5">
-          
-          <div class="col-md-12 text-center ">
-            <div class="custom-pagination ml-auto">
-              <a href="#" class="prev">Prev</a>
-              <div class="d-inline-block">
-              <a href="#" class="active">1</a>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              </div>
-              <a href="#" class="next">Next</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="{% static 'img/img1.jpg' %}" style="width:100%" alt="Framework javascript">
-        <div class="caption">
-        <a href="#"> <h3 class="text-uppercase text-center">Framework JS</h3></a>
-          <p class="text-center text-uppercase">Rabat,Morroco</p>
-          <p class="text-center ">Vous voulez développer efficacement avec PHP, utiliser un Framework</p>
-
-        </div>
-      </div>
-    </div>
-
-
-
-  </div>
-  <hr>
-  <div class="row">
-
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="{% static 'img/img1.jpg' %}" style="width:100%" alt="programmation">
-        <div class="caption">
-        <a href="#"> <h3 class="text-uppercase text-center">Programmer</h3></a>
-          <p class="text-center text-uppercase">Casablanca,Morocco</p>
-          <p class="text-center">Découvrez la joie de la programmation du php au java en passant par le C.</p>
-    </section>
-    
-    <footer class="site-footer">
-
-      <a href="#top" class="smoothscroll scroll-top">
-        <span class="icon-keyboard_arrow_up"></span>
-      </a>
-
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-6 col-md-3 mb-4 mb-md-0">
-            <h3>Search Trending</h3>
-            <ul class="list-unstyled">
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Graphic Design</a></li>
-              <li><a href="#">Web Developers</a></li>
-              <li><a href="#">Python</a></li>
-              <li><a href="#">HTML5</a></li>
-              <li><a href="#">CSS3</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-3 mb-4 mb-md-0">
-            <h3>Company</h3>
-            <ul class="list-unstyled">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Career</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Resources</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-3 mb-4 mb-md-0">
-            <h3>Support</h3>
-            <ul class="list-unstyled">
-              <li><a href="#">Support</a></li>
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Terms of Service</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-3 mb-4 mb-md-0">
-            <h3>Contact Us</h3>
-            <div class="footer-social">
-              <a href="#"><span class="icon-facebook"></span></a>
-              <a href="#"><span class="icon-twitter"></span></a>
-              <a href="#"><span class="icon-instagram"></span></a>
-              <a href="#"><span class="icon-linkedin"></span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="{% static 'img/img1.jpg' %}" style="width:100%" alt="framework php">
-        <div class="caption">
-      <a href="#">   <h3 class="text-uppercase text-center">Framework PHP</h3></a>
-          <p class="text-center text-uppercase">Rabat,Morroco</p>
-          <p class="text-center ">Vous voulez développer efficacement avec PHP, utiliser un Framework</p>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="{% static 'img/img1.jpg' %}" style="width:100%" alt="Framework javascript">
-        <div class="caption">
-        <a href="#">  <h3 class="text-uppercase text-center">Framework JS</h3></a>
-          <p class="text-center text-uppercase">Rabat,Morroco</p>
-          <p class="text-center ">Vous voulez développer efficacement avec PHP, utiliser un Framework</p>
-
-        <div class="row text-center">
-          <div class="col-12">
-            <p class="copyright"><small>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by MCSC groupe of zineb nihal et achraf</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-    </footer>
-  
-  </div>
-
-  <hr>
+	</div>
 </div>
 
 <!--- Footer -->
 <footer>
 <div class="container-fluid padding">
-  <div class="row text-center">
+	<div class="row text-center">
 <div class="col-md-4">
-  <hr class="light">
+	<hr class="light">
 <img src="{% static 'img/logo1.png' %}" style="height: 50px;width: : 60px" alt="">
-  <hr class="light">
-  <p>+212654873246</p>
-  <p>Test@test.com</p>
-  <p>23 Rue airfan 1</p>
-  <p>Tanger , Maroc</p>
+	<hr class="light">
+	<p>+212654873246</p>
+	<p>Test@test.com</p>
+	<p>23 Rue airfan 1</p>
+	<p>Tanger , Maroc</p>
 
 </div>
 <div class="col-md-4">
-  <hr class="light">
-  <h5>Our Site :</h5>
-  <hr class="light">
-  <p>Lorem Ipsum is simply dummy text </p>
-  <p>Lorem Ipsum is simply dummy text </p>
-  <p>Lorem Ipsum is simply dummy text </p>
+	<hr class="light">
+	<h5>Our Site :</h5>
+	<hr class="light">
+	<p>Lorem Ipsum is simply dummy text </p>
+	<p>Lorem Ipsum is simply dummy text </p>
+	<p>Lorem Ipsum is simply dummy text </p>
 </div>
 <div class="col-md-4">
-  <hr class="light">
-  <h5>Our Site :</h5>
-  <hr class="light">
-  <p>Lorem Ipsum is simply dummy text </p>
-  <p>Lorem Ipsum is simply dummy text </p>
-  <p>Lorem Ipsum is simply dummy text </p>
+	<hr class="light">
+	<h5>Our Site :</h5>
+	<hr class="light">
+	<p>Lorem Ipsum is simply dummy text </p>
+	<p>Lorem Ipsum is simply dummy text </p>
+	<p>Lorem Ipsum is simply dummy text </p>
 </div>
 
 <div class="col-12">
-  <hr class="light">
-  <h5>&copy; MCSCC</h5>
+	<hr class="light">
+	<h5>&copy; MCSCC</h5>
 </div>
-  </div>
+	</div>
 </div>
 
 
@@ -414,26 +343,4 @@
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 </body>
-</html>
-    <!-- SCRIPTS -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/stickyfill.min.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/quill.min.js"></script>
-    
-    
-    <script src="js/bootstrap-select.min.js"></script>
-    
-    <script src="js/custom.js"></script>
-   
-   
-     
-  </body>
 </html>
