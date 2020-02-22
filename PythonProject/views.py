@@ -11,6 +11,9 @@ def Signup(request):
 def jobsingle(request):
     return render(request, 'jobsingle.html')
 
+def cv(request):
+    return render(request, 'cv.html')
+
 def index(request):
     return render(request, 'index.html')
 

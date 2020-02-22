@@ -27,6 +27,7 @@ urlpatterns = [
     path('success/', views.success ,name="success"),
     path('index/', views.accueil),
     path('', views.index),
+    path('cv/', views.cv),
     path('about/', views.about),
     path('Accueil/', views.index),
     path('Profile/', views.Profile),
