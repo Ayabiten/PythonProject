@@ -57,7 +57,9 @@
 </button>
 <div class="collapse navbar-collapse" id="navbarResponsive">
   <ul class="navbar-nav ml-auto">
-     <li class="nav-link"><a href="/Accueil/" >Home</a></li> 
+    <li class="nav-link"><a href="/Accueil/" >Home</a></li> 
+	<li class="nav-link"><a href="/index/">Offres</a></li>
+	<li class="nav-link"><a href="/about/">Services</a></li> 
 	{% if user.is_authenticated %}
 		<li class="nav-link"><a href="/Profile/">Mon Compte</a></li> 
 		<li class="nav-link"><a href="/accounts/logout">Logout</a></li>  
@@ -68,7 +70,7 @@
       </li>  <li class="nav-item">
     <a href="#" class="nav-link">sign in</a>
         </li>  -->
-	<li class="nav-link"><a href="/about/">Services</a></li> 
+	
   </ul>
 </div>
   </div>
@@ -83,7 +85,7 @@
 	</ul>
 	<div class="carousel-inner">
 		<div class="carousel-item active">
-			<img src="{% static 'img/bur.jpg' %}" >
+			<img src="{% static 'img/bg.png' %}" >
 <div class="carousel-caption">
 	<h1 class="display-4 text-left "><br>
 	<h1 class="display-4 text-left ">		Don't search for jobs.<br>
