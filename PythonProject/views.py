@@ -29,8 +29,23 @@ def Profile(request):
 def formulaire(request):
     return render(request, 'formulaire.html')
 
-def success(request):
-    return render(request, 'success.html')
+def job1(request):
+    return render(request, 'job1.html')
+
+def job2(request):
+    return render(request, 'job2.html')
+
+def job3(request):
+    return render(request, 'job3.html')
+
+def job4(request):
+    return render(request, 'job4.html')
+
+def job5(request):
+    return render(request, 'job5.html')
+
+def job6(request):
+    return render(request, 'job6.html')
 
 def login(request):
     context={}
