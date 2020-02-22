@@ -8,6 +8,9 @@ from django.contrib.auth.forms import UserCreationForm
 def Signup(request):
     return render(request, 'SignUp.html')
 
+def jobsingle(request):
+    return render(request, 'jobsingle.html')
+
 def index(request):
     return render(request, 'index.html')
 
