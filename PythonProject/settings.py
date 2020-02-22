@@ -58,7 +58,9 @@ TEMPLATE_DIRS = (
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['D:\downloads\www\PythonProject\PythonProject\Templates'],
+        #C:\xampp\htdocs\PythonProject\PythonProject\Templates
+        #'DIRS': ['D:\downloads\www\PythonProject\PythonProject\Templates'],
+        'DIRS': ['C:\\xampp\htdocs\PythonProject\PythonProject\Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
