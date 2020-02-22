@@ -57,18 +57,18 @@
 </button>
 <div class="collapse navbar-collapse" id="navbarResponsive">
   <ul class="navbar-nav ml-auto">
-    <li class="nav-link"><a href="/Accueil/" >Home</a></li>
+    <li class="nav-link"><a href="/Accueil/" >Home</a></li> 
 	{% if user.is_authenticated %}
-		<li class="nav-link"><a href="/Profile/">Mon Compte</a></li>
-		<li class="nav-link"><a href="/accounts/logout">Logout</a></li>
+		<li class="nav-link"><a href="/Profile/">Mon Compte</a></li> 
+		<li class="nav-link"><a href="/accounts/logout">Logout</a></li>  
 	{% else %}
-		<li class="nav-link"><a href="/accounts/login/">Login</a></li>
+		<li class="nav-link"><a href="/accounts/login/">Login</a></li>	
 	{% endif %}
    <!--<a href="#" class="nav-link">sign up</a>
       </li>  <li class="nav-item">
     <a href="#" class="nav-link">sign in</a>
         </li>  -->
-	<li class="nav-link"><a href="/about/">Services</a></li>
+	<li class="nav-link"><a href="/about/">Services</a></li> 
   </ul>
 </div>
   </div>
@@ -77,7 +77,9 @@
 <!--- Image Slider -->
 <div id="slides" class="carousel slide" data-ride="carousel">
 	<ul class="carousel-indicators">
-
+		<li data-target="#slides" data-slide-to="0" class="active"></li>
+		<li data-target="#slides" data-slide-to="1"></li>
+		<li data-target="#slides" data-slide-to="2"></li>
 	</ul>
 	<div class="carousel-inner">
 		<div class="carousel-item active">
@@ -149,7 +151,7 @@ Miracle de la technologie… Vous n'aurez bientôt plus besoin de vous déplacer
 	</div>
 </div>
  -->
-<!--- Three Column Section
+<!--- Three Column Section 
 <div class="container-fluid padding">
 	<div class="row text-center padding">
 		<div class="col-xs-12 col-sm-6 col-md-4">
@@ -211,7 +213,7 @@ Miracle de la technologie… Vous n'aurez bientôt plus besoin de vous déplacer
 	</div>
 </div>
 <hr class="my-4">
-<!--- Fixed background
+<!--- Fixed background -->
 <figure>
 	<div class="fixed-wrap">
 		<div id="fixed" class="fixed">
@@ -220,7 +222,7 @@ Miracle de la technologie… Vous n'aurez bientôt plus besoin de vous déplacer
 	</div>
 </figure>
 
--->
+
 
 <!--- Meet the team -->
 
