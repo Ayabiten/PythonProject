@@ -9,6 +9,8 @@ def Signup(request):
     return render(request, 'SignUp.html')
 def ContactUs(request):
     return render(request, 'contact.html')
+def Faq(request):
+    return render(request, 'faq.html')
 
 def jobsingle(request):
     return render(request, 'jobsingle.html')
@@ -27,6 +29,8 @@ def job_6(request):
 
 def index(request):
     return render(request, 'index.html')
+def index1(request):
+    return render(request, 'index1.html')
 
 def accueil(request):
     return render(request, 'Accueil.html')
