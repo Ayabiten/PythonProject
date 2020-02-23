@@ -1,288 +1,340 @@
-<<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-		{% load static %}
+  <head>
+    <title>MCCJob </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% load static %}
 
-	<title> MCSC job</title>
-	<link rel="stylesheet"  href="{% static 'css/bootstrap.min.css' %}">
-  <link  rel="stylesheet" type="text/css"  href="{% static 'css/all.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/custom-bs.css'%}">
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-select.min.css'%}">
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css'%}">
+    <link rel="stylesheet" href="{% static 'fonts/line-icons/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/animate.min.css'%}">
 
-	<style type="text/css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+  </head>
+  <body id="top">
 
-.search-slt{
-    display: block;
-    width: 100%;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    color: #55595c;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
-    height: calc(3rem + 2px) !important;
-    border-radius:0;
-}
-.wrn-btn{
-    width: 100%;
-    font-size: 16px;
-    font-weight: 200;
-    text-transform: capitalize;
-    height: calc(3rem + 2px) !important;
-    border-radius:0;
-}
-@media (min-width: 500px){
-    .search-sec{
-        position: relative;
-        top: -114px;
-        background: rgba(26, 70, 104, 0.51);
-    }
-}
-
-@media (max-width: 500px){
-    .search-sec{
-        background: #1A4668;
-    }
-}
-	</style>
-</head>
-<body>
-
-<!-- Navigation -->
-<nav style="color: #FFF" class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"> <img src="{% static 'img/logo1.png' %}" style="height: 50px;width: : 60px" alt=""> </a>
-<button type="button" name="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarResponsive">
-  <ul class="navbar-nav ml-auto">
-     <li class="nav-link"><a href="/Accueil/" >Home</a></li> 
-	{% if user.is_authenticated %}
-		<li class="nav-link"><a href="/Profile/">Mon Compte</a></li> 
-		<li class="nav-link"><a href="/accounts/logout">Logout</a></li>  
-	{% else %}
-		<li class="nav-link"><a href="/accounts/login/">Login</a></li>	
-	{% endif %}
-   <!--<a href="#" class="nav-link">sign up</a>
-      </li>  <li class="nav-item">
-    <a href="#" class="nav-link">sign in</a>
-        </li>  -->
-	<li class="nav-link"><a href="/about/">Services</a></li> 
-  </ul>
-</div>
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
   </div>
-</nav>
-
-<!--- Image Slider -->
-<div id="slides" class="carousel slide" data-ride="carousel">
-	<ul class="carousel-indicators">
-		<li data-target="#slides" data-slide-to="0" class="active"></li>
-		<li data-target="#slides" data-slide-to="1"></li>
-		<li data-target="#slides" data-slide-to="2"></li>
-	</ul>
-	<div class="carousel-inner">
-		<div class="carousel-item active">
-			<img src="{% static 'img/bur.jpg' %}" >
-<div class="carousel-caption">
-	<h1 class="display-4 text-left "><br>
-	<h1 class="display-4 text-left ">		Don't search for jobs.<br>
-		<span class="color-teal text-left">		Find the right fit</span> instead.</h1>
 
 
-<!--
-    <section>
-    <div class="container">
-        <form action="#" method="post" novalidate="novalidate">
-            <div class="row">
-                <div class="col-lg-12">
-                  <div class="row">
-                    <div class="col-md-4">
-                        <div class="input-group">
-                            <span class="input-group-prepend">
-                                <div class="input-group-text bg-transparent border-right-0"><i class="fa fa-search"></i></div>
-                            </span>
-                            <input class="form-control py-2 border-left-0 border"  value="Titel or keyword" id="search-input">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="input-group">
-                            <span class="input-group-prepend">
-                                <div class="input-group-text bg-transparent border-right-0"><i class="fa fa-location-arrow"></i></div>
-                            </span>
-                            <input class="form-control py-2 border-left-0 border" value="Location ... " id="city-input">
-                        </div>
+<div class="site-wrap">
 
-                    </div>
-                    <div class="col-md-2">
-                      <button class="btn btn-outline-primary" type="button">
-                          Search
-                      </button>
-                    </div>
-</div>
-</div>
-</div>
-</form>
-</div>
-                    </section>
--->
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
 
 
-</div>
-	</div>
-</div>
-	</div>
+    <!-- NAVBAR -->
+    <header class="site-navbar mt-3">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="site-logo col-6"><a href="index.html">MCCJOB</a></div>
+
+          <nav class="mx-auto site-navigation">
+            <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+              <li><a href="/" class="nav-link ">Home</a></li>
+
+              <li><a href="#" >Post a Job</a></li>
+
+              {% if user.is_authenticated %}
+              <li class="has-children">
+                <a href="job-listings.html" >Profile</a>
+                <ul class="dropdown">
+                  <li><a href="/Profile/" >Mon Compte</a></li>
+                  <li><a href="/accounts/logout">Logout</a></li>
+                </ul>
+                <li><a href="/Offers" >Offers</a></li>
+
+              </li>
+            	{% else %}
+              <li><a href="/accounts/login/">Log In</a></li>
+            	{% endif %}
+
+              <li><a href="/about" class="active">About</a></li>
+              <li><a href="/ContactUs">Contact</a></li>
+
+            </ul>
+          </nav>
+
+
+        </div>
+      </div>
+    </header>
+
+    <!-- HOME -->
+    <section class="section-hero overlay inner-page bg-image" style="background-image: url('{% static 'images/hero_1.jpg'%}');" id="home-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h1 class="text-white font-weight-bold">About Us</h1>
+            <div class="custom-breadcrumbs">
+              <a href="#">Home</a> <span class="mx-2 slash">/</span>
+              <span class="text-white"><strong>About Us</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-image overlay-primary fixed overlay" id="next-section" style="background-image: url('{% static 'images/hero_1.jpg'%}');">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-7 text-center">
+            <h2 class="section-title mb-2 text-white">MCCTeam </h2>
+            <p class="lead text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita unde officiis recusandae sequi excepturi corrupti.</p>
+          </div>
+        </div>
+        <div class="row pb-0 block__19738 section-counter">
+
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="1930">0</strong>
+            </div>
+            <span class="caption">Candidates</span>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="54">0</strong>
+            </div>
+            <span class="caption">Jobs Posted</span>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="120">0</strong>
+            </div>
+            <span class="caption">Jobs Filled</span>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="550">0</strong>
+            </div>
+            <span class="caption">Companies</span>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="site-section pb-0">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <a data-fancybox data-ratio="2" href="https://vimeo.com/317571768" class="block__96788">
+              <span class="play-icon"><span class="icon-play"></span></span>
+              <img src="{% static 'images/sq_img_6.jpg'%}" alt="Image" class="img-fluid img-shadow">
+            </a>
+          </div>
+          <div class="col-lg-5 ml-auto">
+            <h2 class="section-title mb-3">MCCTeam For Freelancers, Web Developers</h2>
+            <p class="lead">Eveniet voluptatibus voluptates suscipit minima, cum voluptatum ut dolor, sed facere corporis qui, ea quisquam quis odit minus nulla vitae. Sit, voluptatem.</p>
+            <p>Ipsum harum assumenda in eum vel eveniet numquam, cumque vero vitae enim cupiditate deserunt eligendi officia modi consectetur. Expedita tempora quos nobis earum hic ex asperiores quisquam optio nostrum sit!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-section pt-0">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0 order-md-2">
+            <a data-fancybox data-ratio="2" href="" class="block__96788">
+              <span class="play-icon"><span class="icon-play"></span></span>
+              <img src="{% static 'images/sq_img_8.jpg'%}" alt="Image" class="img-fluid img-shadow">
+            </a>
+          </div>
+          <div class="col-lg-5 mr-auto order-md-1  mb-5 mb-lg-0">
+            <h2 class="section-title mb-3">MCCTeam For Workers</h2>
+            <p class="lead">Eveniet voluptatibus voluptates suscipit minima, cum voluptatum ut dolor, sed facere corporis qui, ea quisquam quis odit minus nulla vitae. Sit, voluptatem.</p>
+            <p>Ipsum harum assumenda in eum vel eveniet numquam, cumque vero vitae enim cupiditate deserunt eligendi officia modi consectetur. Expedita tempora quos nobis earum hic ex asperiores quisquam optio nostrum sit!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="site-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center" data-aos="fade">
+            <h2 class="section-title mb-3">Our Team</h2>
+          </div>
+        </div>
+
+        <div class="row align-items-center block__69944">
+
+          <div class="col-md-6">
+            <img src="{% static 'img/zineb.jpg' %} " style="height: 200px;width: 200px" alt="Image" class="img-fluid mb-4 rounded">
+          </div>
+
+          <div class="col-md-6">
+            <h3>Zineb Louzi</h3>
+            <p class="text-muted">Expert Cybersécurité</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            <div class="social mt-4">
+              <a href="#"><span class="icon-facebook"></span></a>
+              <a href="#"><span class="icon-twitter"></span></a>
+              <a href="#"><span class="icon-instagram"></span></a>
+              <a href="#"><span class="icon-linkedin"></span></a>
+            </div>
+          </div>
+
+          <div class="col-md-6 order-md-2 ml-md-auto">
+            <img src="{% static 'img/nihal.jpg' %}"  style="height: 200px;width: 200px" alt="Image" class="img-fluid mb-4 rounded">
+          </div>
+
+          <div class="col-md-6">
+            <h3>Nihal Akerdad</h3>
+            <p class="text-muted">Architecte Cybersécurité</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            <div class="social mt-4">
+              <a href="#"><span class="icon-facebook"></span></a>
+              <a href="#"><span class="icon-twitter"></span></a>
+              <a href="#"><span class="icon-instagram"></span></a>
+              <a href="#"><span class="icon-linkedin"></span></a>
+            </div>
+          </div>
 
 
 
 
-<!--- Welcome Section
-<div class="container-fluid padding">
-	<div class="row welcome text-center">
-			<div class="col-12">
-				<h1 class="display-4">Notre service</h1>
-			</div>
-<hr>
-<div class="col-12">
-	<p>Après la fin du CV papier, bientôt celle de l'entretien d'embauche ? Une nouvelle formule remporte de plus en plus de succès auprès des recruteurs : les rendez-vous virtuels.<br>
-
-Miracle de la technologie… Vous n'aurez bientôt plus besoin de vous déplacer pour passer un entretien de recrutement. Tout peut désormais se passer par ordinateurs interposés. Pierrick Rocher, directeur général du cabinet de conseil, Amaris Paris (management, systèmes d'information et ingénierie) est un adepte de la nouvelle plateforme Job rendezvous.com. Il suffit de poster une annonce, pré-sélectioner des candidats et de prendre rendez-vous pour une discussion par webcam. "J'effectue ainsi un premier tri tout en ayant un contact physique avec le candidat. Je peux voir ses réacions, étudier sa gestuelle", explique-t-il.</p>
-</div>
-	</div>
-</div>
- -->
-<!--- Three Column Section 
-<div class="container-fluid padding">
-	<div class="row text-center padding">
-		<div class="col-xs-12 col-sm-6 col-md-4">
-			<i class="fas fa-code"></i>
-			<h3>HTML5</h3>
-			<p>Lorem Ipsum is simply dummy text of the printing</p>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-4">
-			<i class="fas fa-bold"></i>
-			<h3>Bootstrap 4</h3>
-			<p>Lorem Ipsum is simply dummy text of the printing</p>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-4">
-			<i class="fab fa-css3"></i>
-			<h3>CSS 3</h3>
-			<p>Lorem Ipsum is simply dummy text of the printing</p>
-		</div>
-
-	</div>
-	<hr class="my-4">
-</div>
-<!--- Three Column Section
-<div class="container-fluid padding">
-	<div class="row text-center padding">
-		<div class="col-xs-12 col-sm-6 col-md-4">
-<i class="fab fa-python" style="color: #05e305;font-size : 4em;margin : 1rem;"></i>
-			<h3>Python</h3>
-			<p>Lorem Ipsum is simply dummy text of the printing</p>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-4">
-			<img src="{% static 'img/dj.png' %}" style="height: 50%; width: 20%" alt="">
-			<h3>Django</h3>
-			<p>Lorem Ipsum is simply dummy text of the printing</p>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-4">
-<i class="fas fa-database" style="color: #0C05E3;font-size : 4em;margin : 1rem;"></i>
-			<h3>SQLIte</h3>
-			<p>Lorem Ipsum is simply dummy text of the printing</p>
-		</div>
-
-	</div>
-	<hr class="my-4">
-</div>-->
-
-<!--- Two Column Section -->
-		<div class="container-fluid padding">
-	<div class="row welcome text-center">
-			<div class="col-12">
-				<h1 class="display-4">Notre service</h1>
-			</div>
-<hr>
-<div class="col-12">
-	<p>Après la fin du CV papier, bientôt celle de l'entretien d'embauche ? Une nouvelle formule remporte de plus en plus de succès auprès des recruteurs : les rendez-vous virtuels.<br>
-
-Miracle de la technologie… Vous n'aurez bientôt plus besoin de vous déplacer pour passer un entretien de recrutement. Tout peut désormais se passer par ordinateurs interposés. Pierrick Rocher, directeur général du cabinet de conseil, Amaris Paris (management, systèmes d'information et ingénierie) est un adepte de la nouvelle plateforme Job rendezvous.com. Il suffit de poster une annonce, pré-sélectioner des candidats et de prendre rendez-vous pour une discussion par webcam. "J'effectue ainsi un premier tri tout en ayant un contact physique avec le candidat. Je peux voir ses réacions, étudier sa gestuelle", explique-t-il.</p>
-</div>
-	</div>
-</div>
 
 
-<!--- Two Column Section -->
 
 
-<!--- Connect -->
-<div class="container-fluid padding">
-	<div class="row text-center padding">
 
-<div class="col-12">
-<h2>Connect</h2>
-</div>
-<div class="col-12 social padding">
-	<a href="#"> <i class="fab fa-facebook"></i>  </a>
-	<a href="#"> <i class="fab fa-twitter"></i>  </a>
-	<a href="#"> <i class="fab fa-instagram"></i>  </a>
-	<a href="#"> <i class="fab fa-youtube"></i>  </a>
-	<a href="#"> <i class="fab fa-linkedin"></i>  </a>
-</div>
+        </div>
+           <div class="row align-items-center block__69944">
 
 
-	</div>
-</div>
+        <div class="col-md-6">
+          <img src="{% static 'img/yabi.jpg' %}" alt="Image" class="img-fluid mb-4 rounded">
+        </div>
 
-<!--- Footer -->
-<footer>
-<div class="container-fluid padding">
-	<div class="row text-center">
-<div class="col-md-4">
-	<hr class="light">
-<img src="{% static 'img/logo1.png' %}" style="height: 50px;width: : 60px" alt="">
-	<hr class="light">
-	<p>+212654873246</p>
-	<p>Test@test.com</p>
-	<p>23 Rue airfan 1</p>
-	<p>Tanger , Maroc</p>
+        <div class="col-md-6">
+          <h3>Achraf Iabiten</h3>
+          <p class="text-muted">Cybersécurity Student & Mobile Dev</p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+          <div class="social mt-4">
+            <a href="#"><span class="icon-facebook"></span></a>
+            <a href="#"><span class="icon-twitter"></span></a>
+            <a href="#"><span class="icon-instagram"></span></a>
+            <a href="#"><span class="icon-linkedin"></span></a>
+          </div>
+        </div>
 
-</div>
-<div class="col-md-4">
-	<hr class="light">
-	<h5>Our Site :</h5>
-	<hr class="light">
-	<p>Lorem Ipsum is simply dummy text </p>
-	<p>Lorem Ipsum is simply dummy text </p>
-	<p>Lorem Ipsum is simply dummy text </p>
-</div>
-<div class="col-md-4">
-	<hr class="light">
-	<h5>Our Site :</h5>
-	<hr class="light">
-	<p>Lorem Ipsum is simply dummy text </p>
-	<p>Lorem Ipsum is simply dummy text </p>
-	<p>Lorem Ipsum is simply dummy text </p>
-</div>
-
-<div class="col-12">
-	<hr class="light">
-	<h5>&copy; MCSCC</h5>
-</div>
-	</div>
-</div>
+        </div>
+      </div>
+    </section>
 
 
-</footer>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
-<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-</body>
-</html>
 
-	
 
-</html>
+
+
+
+
+
+
+
+
+
+
+
+        <footer class="site-footer">
+
+          <a href="#top" class="smoothscroll scroll-top">
+            <span class="icon-keyboard_arrow_up"></span>
+          </a>
+
+          <div class="container">
+            <div class="row mb-5">
+              <div class="col-6 col-md-3 mb-4 mb-md-0">
+                <h3>Search Trending</h3>
+                <ul class="list-unstyled">
+                  <li><a href="#">Web Design</a></li>
+                  <li><a href="#">Graphic Design</a></li>
+                  <li><a href="#">Web Developers</a></li>
+                  <li><a href="#">Python</a></li>
+
+                </ul>
+              </div>
+              <div class="col-6 col-md-3 mb-4 mb-md-0">
+                <h3>Company</h3>
+                <ul class="list-unstyled">
+                  <li><a href="/about">About Us</a></li>
+                  <li><a href="/Offers">Offers</a></li>
+                  <li><a href="/FAQ">FAQ</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-3 mb-4 mb-md-0">
+                <h3>Support</h3>
+                <ul class="list-unstyled">
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-3 mb-4 mb-md-0">
+                <h3>Contact Us</h3>
+                <div class="footer-social">
+                  <a href="#"><span class="icon-facebook"></span></a>
+                  <a href="#"><span class="icon-twitter"></span></a>
+                  <a href="#"><span class="icon-instagram"></span></a>
+                  <a href="#"><span class="icon-linkedin"></span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="row text-center">
+              <div class="col-12">
+                <p class="copyright"><small>
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="" target="_blank" >MCC</a>
+                </small></p>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+      <!-- SCRIPTS -->
+      <script src="{% static 'js/jquery.min.js'%}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+      <script src="{% static 'js/isotope.pkgd.min.js'%}"></script>
+      <script src="{% static 'js/stickyfill.min.js'%}"></script>
+      <script src="{% static 'js/jquery.fancybox.min.js'%}"></script>
+      <script src="{% static 'js/jquery.easing.1.3.js'%}"></script>
+
+      <script src="{% static 'js/jquery.waypoints.min.js'%}"></script>
+      <script src="{% static 'js/jquery.animateNumber.min.js'%}"></script>
+      <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+
+      <script src="{% static 'js/bootstrap-select.min.js'%}"></script>
+
+      <script src="{% static 'js/custom.js'%}"></script>
+
+
+    </body>
+    </html>

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{% static 'fonts/line-icons/style.css'%}">
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
     <link rel="stylesheet" href="{% static 'css/animate.min.css'%}">
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="{% static 'css/styles.css'%}">
   </head>
@@ -44,27 +44,35 @@
     <header class="site-navbar mt-3">
       <div class="container-fluid">
         <div class="row align-items-center">
-          <div class="site-logo col-6"><a href="index.html">MCCJOB</a></div>
+          <div class="site-logo col-6"><a href="/">MCCJOB</a></div>
 
-          <nav class="mx-auto site-navigation">
-            <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
-              <li><a href="/" class="nav-link ">Home</a></li>
-              <li class="has-children">
-                <a href="job-listings.html" class="active">Job Listings</a>
-                <ul class="dropdown">
-                  <li><a href="job-single.html" class="active">Job Single</a></li>
-                  <li><a href="post-job.html">Post a Job</a></li>
-                </ul>
-              </li>
-              <li><a href="/about">Post a Job</a></li>
-              <li><a href="/about">Log In</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/ContactUs">Contact</a></li>
+                    <nav class="mx-auto site-navigation">
+                      <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+                        <li><a href="/" class="nav-link ">Home</a></li>
 
-            </ul>
-          </nav>
+                        <li><a href="/about">Post a Job</a></li>
 
-    
+                        {% if user.is_authenticated %}
+                        <li class="has-children">
+                          <a href="job-listings.html" class="active">Profile</a>
+                          <ul class="dropdown">
+                            <li><a href="/Profile/" class="active">Mon Compte</a></li>
+                            <li><a href="/accounts/logout">Logout</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="/Offers" >Offers</a></li>
+
+                      	{% else %}
+                        <li><a href="/accounts/login/">Log In</a></li>
+                      	{% endif %}
+
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/ContactUs">Contact</a></li>
+
+                      </ul>
+                    </nav>
+
+
         </div>
       </div>
     </header>
@@ -110,8 +118,19 @@
                 <a href="#" class="btn btn-block btn-light btn-md"><span class="icon-heart-o mr-2 text-danger"></span>Save Job</a>
               </div>
               <div class="col-6">
-                <a href="#" class="btn btn-block btn-primary btn-md">Apply Now</a>
+                <a href="#" class="btn btn-block btn-primary btn-md" onclick="validation();">Apply Now</a>
               </div>
+              <script type="text/javascript">
+                function validation()
+                {
+                  swal({
+                      title: "votre demande est faite!",
+                      text: "Merci!",
+                      icon: "success",
+                      button: "confirmer!",
+                    });
+                }
+              </script>
             </div>
           </div>
         </div>
@@ -162,8 +181,19 @@ Good communication Some travel involved</p>
                 <a href="#" class="btn btn-block btn-light btn-md"><span class="icon-heart-o mr-2 text-danger"></span>Save Job</a>
               </div>
               <div class="col-6">
-                <a href="#" class="btn btn-block btn-primary btn-md">Apply Now</a>
+               <a href="#" class="btn btn-block btn-primary btn-md" onclick="validation();">Apply Now</a>
               </div>
+              <script type="text/javascript">
+                function validation()
+                {
+                  swal({
+                      title: "votre demande est faite!",
+                      text: "Merci!",
+                      icon: "success",
+                      button: "confirmer!",
+                    });
+                }
+              </script>
             </div>
 
           </div>
@@ -267,81 +297,79 @@ Good communication Some travel involved</p>
 
     </section>
 
-    <footer class="site-footer">
 
-      <a href="#top" class="smoothscroll scroll-top">
-        <span class="icon-keyboard_arrow_up"></span>
-      </a>
+            <footer class="site-footer">
 
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-6 col-md-3 mb-4 mb-md-0">
-            <h3>Search Trending</h3>
-            <ul class="list-unstyled">
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Graphic Design</a></li>
-              <li><a href="#">Web Developers</a></li>
-              <li><a href="#">Python</a></li>
-              <li><a href="#">HTML5</a></li>
-              <li><a href="#">CSS3</a></li>
-            </ul>
+              <a href="#top" class="smoothscroll scroll-top">
+                <span class="icon-keyboard_arrow_up"></span>
+              </a>
+
+              <div class="container">
+                <div class="row mb-5">
+                  <div class="col-6 col-md-3 mb-4 mb-md-0">
+                    <h3>Search Trending</h3>
+                    <ul class="list-unstyled">
+                      <li><a href="#">Web Design</a></li>
+                      <li><a href="#">Graphic Design</a></li>
+                      <li><a href="#">Web Developers</a></li>
+                      <li><a href="#">Python</a></li>
+
+                    </ul>
+                  </div>
+                  <div class="col-6 col-md-3 mb-4 mb-md-0">
+                    <h3>Company</h3>
+                    <ul class="list-unstyled">
+                      <li><a href="/about">About Us</a></li>
+                      <li><a href="/Offers">Offers</a></li>
+                      <li><a href="/FAQ">FAQ</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-6 col-md-3 mb-4 mb-md-0">
+                    <h3>Support</h3>
+                    <ul class="list-unstyled">
+                      <li><a href="#">Support</a></li>
+                      <li><a href="#">Privacy</a></li>
+                      <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-6 col-md-3 mb-4 mb-md-0">
+                    <h3>Contact Us</h3>
+                    <div class="footer-social">
+                      <a href="#"><span class="icon-facebook"></span></a>
+                      <a href="#"><span class="icon-twitter"></span></a>
+                      <a href="#"><span class="icon-instagram"></span></a>
+                      <a href="#"><span class="icon-linkedin"></span></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row text-center">
+                  <div class="col-12">
+                    <p class="copyright"><small>
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="" target="_blank" >MCC</a>
+                    </small></p>
+                  </div>
+                </div>
+              </div>
+            </footer>
+
           </div>
-          <div class="col-6 col-md-3 mb-4 mb-md-0">
-            <h3>Company</h3>
-            <ul class="list-unstyled">
-              <li><a href="#">About Us</a></li>
+          <!-- SCRIPTS -->
+          <script src="{% static 'js/jquery.min.js'%}"></script>
+          <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+          <script src="{% static 'js/isotope.pkgd.min.js'%}"></script>
+          <script src="{% static 'js/stickyfill.min.js'%}"></script>
+          <script src="{% static 'js/jquery.fancybox.min.js'%}"></script>
+          <script src="{% static 'js/jquery.easing.1.3.js'%}"></script>
 
-              <li><a href="#">Blog</a></li>
+          <script src="{% static 'js/jquery.waypoints.min.js'%}"></script>
+          <script src="{% static 'js/jquery.animateNumber.min.js'%}"></script>
+          <script src="{% static 'js/owl.carousel.min.js'%}"></script>
 
-            </ul>
-          </div>
-          <div class="col-6 col-md-3 mb-4 mb-md-0">
-            <h3>Support</h3>
-            <ul class="list-unstyled">
-              <li><a href="#">Support</a></li>
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Terms of Service</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-3 mb-4 mb-md-0">
-            <h3>Contact Us</h3>
-            <div class="footer-social">
-              <a href="#"><span class="icon-facebook"></span></a>
-              <a href="#"><span class="icon-twitter"></span></a>
-              <a href="#"><span class="icon-instagram"></span></a>
-              <a href="#"><span class="icon-linkedin"></span></a>
-            </div>
-          </div>
-        </div>
+          <script src="{% static 'js/bootstrap-select.min.js'%}"></script>
 
-        <div class="row text-center">
-          <div class="col-12">
-            <p class="copyright"><small>
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by MCSC TEAM</a>
-          </small></p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-  </div>
-
-    <!-- SCRIPTS -->
-    <script src="{% static 'js/jquery.min.js'%}"></script>
-    <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
-    <script src="{% static 'js/isotope.pkgd.min.js'%}"></script>
-    <script src="{% static 'js/stickyfill.min.js'%}"></script>
-    <script src="{% static 'js/jquery.fancybox.min.js'%}"></script>
-    <script src="{% static 'js/jquery.easing.1.3.js'%}"></script>
-
-    <script src="{% static 'js/jquery.waypoints.min.js'%}"></script>
-    <script src="{% static 'js/jquery.animateNumber.min.js'%}"></script>
-    <script src="{% static 'js/owl.carousel.min.js'%}"></script>
-
-    <script src="{% static 'js/bootstrap-select.min.js'%}"></script>
-
-    <script src="{% static 'js/custom.js'%}"></script>
+          <script src="{% static 'js/custom.js'%}"></script>
 
 
-  </body>
-</html>
+        </body>
+        </html>

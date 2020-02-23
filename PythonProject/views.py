@@ -7,15 +7,30 @@ from django.contrib.auth.forms import UserCreationForm
 
 def Signup(request):
     return render(request, 'SignUp.html')
+def ContactUs(request):
+    return render(request, 'contact.html')
+def Faq(request):
+    return render(request, 'faq.html')
 
 def jobsingle(request):
     return render(request, 'jobsingle.html')
-
-def cv(request):
-    return render(request, 'cv.html')
+def job_1(request):
+    return render(request, 'job1.html')
+def job_2(request):
+    return render(request, 'job2.html')
+def job_3(request):
+    return render(request, 'job3.html')
+def job_4(request):
+    return render(request, 'job4.html')
+def job_5(request):
+    return render(request, 'job5.html')
+def job_6(request):
+    return render(request, 'job6.html')
 
 def index(request):
     return render(request, 'index.html')
+def index1(request):
+    return render(request, 'index1.html')
 
 def accueil(request):
     return render(request, 'Accueil.html')
@@ -29,23 +44,8 @@ def Profile(request):
 def formulaire(request):
     return render(request, 'formulaire.html')
 
-def job1(request):
-    return render(request, 'job1.html')
-
-def job2(request):
-    return render(request, 'job2.html')
-
-def job3(request):
-    return render(request, 'job3.html')
-
-def job4(request):
-    return render(request, 'job4.html')
-
-def job5(request):
-    return render(request, 'job5.html')
-
-def job6(request):
-    return render(request, 'job6.html')
+def success(request):
+    return render(request, 'success.html')
 
 def login(request):
     context={}
@@ -57,7 +57,6 @@ def login(request):
              return render(request, 'Accueil.html' )
         else:
             context["error"] = "erreur"
-            return render(request, 'login.html' )
+            return render(request, 'registration/login.html' )
     else:
-        return render(request, 'login.html' )
-        
+        return render(request, 'registration/login.html' )
