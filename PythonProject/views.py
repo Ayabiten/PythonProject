@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.contrib.auth import authenticate , login , logout
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib import messages
-def messages(request):
-    return render(request, 'messages.html')
+
+#def login(request):
+    #return render(request, 'login.html')
 
 def Signup(request):
     return render(request, 'SignUp.html')
@@ -54,7 +54,6 @@ def login(request):
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
         if user:
-             messages.success(request,'votre Login est Valide')
              return render(request, 'Accueil.html' )
         else:
             context["error"] = "erreur"

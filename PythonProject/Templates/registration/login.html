@@ -38,20 +38,13 @@
            		    	<input type="password" class="input" name="password" id="password">
             	   </div>
             	</div>
-              
-            	<a href="#">Forgot Password?</a>
-               <div class="form-group">
-          {% if messages %}
-          <ul class="messages">
-                {% for messages in messages %}
-                <li>
-                <div class="alert alert-success">{{message}}</div>
-              </li>
-                {% endfor %}
-              </ul>
+              {% if user.is_authenticated %}
+
+              {% else %}
+              <p>Your username and password didn't match. Please try again.</p>
                 
                 {% endif %}
-   </div> 
+            	<a href="#">Forgot Password?</a>
             	<input type="submit" class="btn" value="Login">
             </form>
         </div>

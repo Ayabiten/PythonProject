@@ -28,7 +28,6 @@ urlpatterns = [
     path('index/', views.accueil),
     path('', views.index),
     path('cv/', views.cv),
-    path('messages/', views.messages),
     path('about/', views.about),
     path('Accueil/', views.accueil),
     path('Profile/', views.Profile),
