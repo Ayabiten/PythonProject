@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'Recrutement',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -58,7 +59,7 @@ TEMPLATE_DIRS = (
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['D:\downloads\www\PythonProject\PythonProject\Templates'],
+        'DIRS': ['C:\\xampp\htdocs\PythonProject\PythonProject\Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

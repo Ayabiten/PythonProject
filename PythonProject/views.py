@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth import authenticate , login , logout
 from django.contrib.auth.forms import UserCreationForm
+from Recrutement.models import Contactus
 
 #def login(request):
     #return render(request, 'login.html')
@@ -8,6 +9,14 @@ from django.contrib.auth.forms import UserCreationForm
 def Signup(request):
     return render(request, 'SignUp.html')
 def ContactUs(request):
+    if request.method == 'POST':
+        Nom = request.POST.get('fname')
+        Prenom = request.POST.get('lname')
+        Email = request.POST.get('email')
+        Objet = request.POST.get('subject')
+        Message = request.POST.get('message')
+        m = Contactus(Nom=Nom,Prenom=Prenom,Email=Email,Objet=Objet,Message=Message)
+        m.save()
     return render(request, 'contact.html')
 def Faq(request):
     return render(request, 'faq.html')

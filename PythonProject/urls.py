@@ -29,7 +29,7 @@ urlpatterns = [
     path('job5/', views.job_5 ),
     path('job6/', views.job_6 ),
     path('Signup/', views.Signup),
-    path('ContactUs/', views.ContactUs),
+    path('ContactUs/', views.ContactUs, name='ContactUs'),
     path('success/', views.success ,name="success"),
     path('Offers/', views.accueil),
     path('', views.index1),
