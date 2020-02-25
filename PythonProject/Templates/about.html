@@ -23,7 +23,7 @@
   <div id="overlayer"></div>
   <div class="loader">
     <div class="spinner-border text-primary" role="status">
-      <span class="sr-only">Loading...</span>
+      <span class="sr-only">Téléchargement...</span>
     </div>
   </div>
 
@@ -48,25 +48,25 @@
 
           <nav class="mx-auto site-navigation">
             <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
-              <li><a href="/" class="nav-link ">Home</a></li>
+              <li><a href="/" class="nav-link ">Accueil</a></li>
 
-              <li><a href="#" >Post a Job</a></li>
+              <li><a href="#" >Ajouter une offre</a></li>
 
               {% if user.is_authenticated %}
               <li class="has-children">
-                <a href="job-listings.html" >Profile</a>
+              <a href="#" >Profil</a>
                 <ul class="dropdown">
                   <li><a href="/Profile/" >Mon Compte</a></li>
                   <li><a href="/accounts/logout">Logout</a></li>
                 </ul>
-                <li><a href="/Offers" >Offers</a></li>
+                <li><a href="/Offers" >Offres</a></li>
 
               </li>
             	{% else %}
-              <li><a href="/accounts/login/">Log In</a></li>
+              <li><a href="/accounts/login/">LogIn</a></li>
             	{% endif %}
 
-              <li><a href="/about" class="active">About</a></li>
+              <li><a href="/about" class="active">A propos</a></li>
               <li><a href="/ContactUs">Contact</a></li>
 
             </ul>
@@ -82,10 +82,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-7">
-            <h1 class="text-white font-weight-bold">About Us</h1>
+            <h1 class="text-white font-weight-bold">A propos de nous</h1>
             <div class="custom-breadcrumbs">
-              <a href="#">Home</a> <span class="mx-2 slash">/</span>
-              <span class="text-white"><strong>About Us</strong></span>
+              <a href="#">Accueil</a> <span class="mx-2 slash">/</span>
+              <span class="text-white"><strong>A propos de nous</strong></span>
             </div>
           </div>
         </div>
@@ -97,87 +97,49 @@
         <div class="row mb-5 justify-content-center">
           <div class="col-md-7 text-center">
             <h2 class="section-title mb-2 text-white">MCCTeam </h2>
-            <p class="lead text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita unde officiis recusandae sequi excepturi corrupti.</p>
+            <p class="lead text-white">MCCJob, c'est une équipe de 3 personnes, qui travaillent ensemble pour vous proposer un outil de recrutement virtuel ainsi qu'un service de support gratuit et illimité.</p>
           </div>
         </div>
         <div class="row pb-0 block__19738 section-counter">
 
           <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
             <div class="d-flex align-items-center justify-content-center mb-2">
-              <strong class="number" data-number="1930">0</strong>
+              <strong class="number" data-number="10">0</strong>
             </div>
-            <span class="caption">Candidates</span>
+            <span class="caption">Candidats</span>
           </div>
 
           <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
             <div class="d-flex align-items-center justify-content-center mb-2">
-              <strong class="number" data-number="54">0</strong>
+              <strong class="number" data-number="15">0</strong>
             </div>
-            <span class="caption">Jobs Posted</span>
+            <span class="caption">Offres Postées</span>
           </div>
 
           <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
             <div class="d-flex align-items-center justify-content-center mb-2">
-              <strong class="number" data-number="120">0</strong>
+              <strong class="number" data-number="30">0</strong>
             </div>
-            <span class="caption">Jobs Filled</span>
+            <span class="caption">Offres remplies</span>
           </div>
 
           <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
             <div class="d-flex align-items-center justify-content-center mb-2">
-              <strong class="number" data-number="550">0</strong>
+              <strong class="number" data-number="20">0</strong>
             </div>
-            <span class="caption">Companies</span>
+            <span class="caption">Entreprises</span>
           </div>
 
 
         </div>
       </div>
     </section>
-
-
-    <section class="site-section pb-0">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-5 mb-lg-0">
-            <a data-fancybox data-ratio="2" href="https://vimeo.com/317571768" class="block__96788">
-              <span class="play-icon"><span class="icon-play"></span></span>
-              <img src="{% static 'images/sq_img_6.jpg'%}" alt="Image" class="img-fluid img-shadow">
-            </a>
-          </div>
-          <div class="col-lg-5 ml-auto">
-            <h2 class="section-title mb-3">MCCTeam For Freelancers, Web Developers</h2>
-            <p class="lead">Eveniet voluptatibus voluptates suscipit minima, cum voluptatum ut dolor, sed facere corporis qui, ea quisquam quis odit minus nulla vitae. Sit, voluptatem.</p>
-            <p>Ipsum harum assumenda in eum vel eveniet numquam, cumque vero vitae enim cupiditate deserunt eligendi officia modi consectetur. Expedita tempora quos nobis earum hic ex asperiores quisquam optio nostrum sit!</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="site-section pt-0">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-5 mb-lg-0 order-md-2">
-            <a data-fancybox data-ratio="2" href="" class="block__96788">
-              <span class="play-icon"><span class="icon-play"></span></span>
-              <img src="{% static 'images/sq_img_8.jpg'%}" alt="Image" class="img-fluid img-shadow">
-            </a>
-          </div>
-          <div class="col-lg-5 mr-auto order-md-1  mb-5 mb-lg-0">
-            <h2 class="section-title mb-3">MCCTeam For Workers</h2>
-            <p class="lead">Eveniet voluptatibus voluptates suscipit minima, cum voluptatum ut dolor, sed facere corporis qui, ea quisquam quis odit minus nulla vitae. Sit, voluptatem.</p>
-            <p>Ipsum harum assumenda in eum vel eveniet numquam, cumque vero vitae enim cupiditate deserunt eligendi officia modi consectetur. Expedita tempora quos nobis earum hic ex asperiores quisquam optio nostrum sit!</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
 
     <section class="site-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 text-center" data-aos="fade">
-            <h2 class="section-title mb-3">Our Team</h2>
+            <h2 class="section-title mb-3">Notre Equipe</h2>
           </div>
         </div>
 
@@ -190,7 +152,7 @@
           <div class="col-md-6">
             <h3>Zineb Louzi</h3>
             <p class="text-muted">Expert Cybersécurité</p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            <p>Experte en cybersécurité et cybercriminalité depuis 2015, lauréate de l'ENSAT, master CyberSécurité et Cybercriminalité </p>
             <div class="social mt-4">
               <a href="#"><span class="icon-facebook"></span></a>
               <a href="#"><span class="icon-twitter"></span></a>
@@ -206,7 +168,7 @@
           <div class="col-md-6">
             <h3>Nihal Akerdad</h3>
             <p class="text-muted">Architecte Cybersécurité</p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            <p>Architecte cybersécurité et cybercriminalité depuis 2015, lauréate de l'ENSAT, master CyberSécurité et Cybercriminalité  </p>
             <div class="social mt-4">
               <a href="#"><span class="icon-facebook"></span></a>
               <a href="#"><span class="icon-twitter"></span></a>
@@ -214,12 +176,6 @@
               <a href="#"><span class="icon-linkedin"></span></a>
             </div>
           </div>
-
-
-
-
-
-
 
 
 
@@ -233,8 +189,8 @@
 
         <div class="col-md-6">
           <h3>Achraf Iabiten</h3>
-          <p class="text-muted">Cybersécurity Student & Mobile Dev</p>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+          <p class="text-muted"> Mobile Developer</p>
+          <p> Développeur applications mobile depuis 2015, lauréat de l'ENSAT, master CyberSécurité et Cybercriminalité  </p>
           <div class="social mt-4">
             <a href="#"><span class="icon-facebook"></span></a>
             <a href="#"><span class="icon-twitter"></span></a>
@@ -268,50 +224,15 @@
           <a href="#top" class="smoothscroll scroll-top">
             <span class="icon-keyboard_arrow_up"></span>
           </a>
-
           <div class="container">
-            <div class="row mb-5">
-              <div class="col-6 col-md-3 mb-4 mb-md-0">
-                <h3>Search Trending</h3>
-                <ul class="list-unstyled">
-                  <li><a href="#">Web Design</a></li>
-                  <li><a href="#">Graphic Design</a></li>
-                  <li><a href="#">Web Developers</a></li>
-                  <li><a href="#">Python</a></li>
-
-                </ul>
-              </div>
-              <div class="col-6 col-md-3 mb-4 mb-md-0">
-                <h3>Company</h3>
-                <ul class="list-unstyled">
-                  <li><a href="/about">About Us</a></li>
-                  <li><a href="/Offers">Offers</a></li>
-                  <li><a href="/FAQ">FAQ</a></li>
-                </ul>
-              </div>
-              <div class="col-6 col-md-3 mb-4 mb-md-0">
-                <h3>Support</h3>
-                <ul class="list-unstyled">
-                  <li><a href="#">Support</a></li>
-                  <li><a href="#">Privacy</a></li>
-                  <li><a href="#">Terms of Service</a></li>
-                </ul>
-              </div>
-              <div class="col-6 col-md-3 mb-4 mb-md-0">
-                <h3>Contact Us</h3>
-                <div class="footer-social">
-                  <a href="#"><span class="icon-facebook"></span></a>
-                  <a href="#"><span class="icon-twitter"></span></a>
-                  <a href="#"><span class="icon-instagram"></span></a>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </div>
-              </div>
+              <div class="col-12 text-center">
+                <h3>Meilleur portail de recrutement marocain, qui vous donne la chance de postuler au <h5>JOB DE REVE </h5></h3>
             </div>
 
             <div class="row text-center">
               <div class="col-12">
                 <p class="copyright"><small>
-                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="" target="_blank" >MCC</a>
+                Copyright &copy; All rights reserved  <i class=" text-danger" aria-hidden="true"></i> by <a href="" target="_blank" >MCC</a>
                 </small></p>
               </div>
             </div>

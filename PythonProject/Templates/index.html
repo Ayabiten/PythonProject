@@ -57,18 +57,18 @@
 </button>
 <div class="collapse navbar-collapse" id="navbarResponsive">
   <ul class="navbar-nav ml-auto">
-    <li class="nav-link"><a href="/Accueil/" >Home</a></li> 
+    <li class="nav-link"><a href="/Accueil/" >Accueil</a></li> 
 	{% if user.is_authenticated %}
 		<li class="nav-link"><a href="/Profile/">Mon Compte</a></li> 
 		<li class="nav-link"><a href="/accounts/logout">Logout</a></li>  
 	{% else %}
-		<li class="nav-link"><a href="/accounts/login/">Login</a></li>	
+		<li class="nav-link"><a href="/accounts/login/">LogIn</a></li>	
 	{% endif %}
    <!--<a href="#" class="nav-link">sign up</a>
       </li>  <li class="nav-item">
     <a href="#" class="nav-link">sign in</a>
         </li>  -->
-	<li class="nav-link"><a href="/about/">Services</a></li> 
+	<li class="nav-link"><a href="/about/">A propos</a></li> 
   </ul>
 </div>
   </div>
@@ -86,8 +86,8 @@
 			<img src="{% static 'img/bur.jpg' %}" >
 <div class="carousel-caption">
 	<h1 class="display-4 text-left "><br>
-	<h1 class="display-4 text-left ">		Don't search for jobs.<br>
-		<span class="color-teal text-left">		Find the right fit</span> instead.</h1>
+	<h1 class="display-4 text-left ">		Ne cherchez plus un emploi au hasard.<br>
+		<span class="color-teal text-left">		trouvez l'emploi de vos </span> REVES.</h1>
 
 
 <!--
