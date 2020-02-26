@@ -8,6 +8,7 @@
     <title>Votre profil</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{% static 'css/bootstrap.min.css' %} " rel="stylesheet" id="bootstrap-css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <style type="text/css">
     body{
     background: -webkit-linear-gradient(left, #3931af, #00c6ff);
@@ -171,10 +172,22 @@ Cyber Security                                     </h6>
                             </ul>
                         </div>
                     </div>
+
                     <div class="col-md-2">
-                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
-                    </div>
-                </div>
+               <a href="/cv/" type="submit" class="profile-edit-btn"  value="Voir le cv" name="btnAddMore" onclick="validation();">voir CV</a>
+              </div>
+              <script type="text/javascript">
+                function validation()
+                {
+                  swal({
+                      title: "votre demande est faite!",
+                      text: "Merci!",
+                      icon: "success",
+                      button: "confirmer!",
+                    });
+                }
+              </script>
+
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-work">

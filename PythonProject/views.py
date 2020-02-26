@@ -25,6 +25,8 @@ def jobsingle(request):
     return render(request, 'jobsingle.html')
 def job_1(request):
     return render(request, 'job1.html')
+def cv(request):
+    return render(request, 'cv.html')
 def job_2(request):
     return render(request, 'job2.html')
 def job_3(request):

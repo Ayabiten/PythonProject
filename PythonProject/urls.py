@@ -28,6 +28,7 @@ urlpatterns = [
     path('job4/', views.job_4 ),
     path('job5/', views.job_5 ),
     path('job6/', views.job_6 ),
+    path('cv/', views.cv),
     path('Signup/', views.Signup),
     path('ContactUs/', views.ContactUs, name='ContactUs'),
     path('success/', views.success ,name="success"),
