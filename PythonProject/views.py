@@ -1,13 +1,26 @@
 from django.shortcuts import render
 from django.contrib.auth import authenticate , login , logout
 from django.contrib.auth.forms import UserCreationForm
-from Recrutement.models import Contactus
+from Recrutement.models import *
 
 #def login(request):
     #return render(request, 'login.html')
 
 def Signup(request):
-    return render(request, 'SignUp.html')
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        Nom = request.POST.get('Nom')
+        Prenom = request.POST.get('Prenom')
+        Email = request.POST.get('email')
+        password = request.POST.get('password')
+        address = request.POST.get('address')
+        ville = request.POST.get('ville')
+        m = Candidat(Username=username,NomPrenom=Nom,Email=Email,password=password,Address=address
+,ville=ville)
+        m.save()
+        return render(request, 'index1.html')
+    else:
+        return render(request, 'registration/SignUp.html')
 def ContactUs(request):
     if request.method == 'POST':
         Nom = request.POST.get('fname')
@@ -18,11 +31,11 @@ def ContactUs(request):
         m = Contactus(Nom=Nom,Prenom=Prenom,Email=Email,Objet=Objet,Message=Message)
         m.save()
     return render(request, 'contact.html')
+
 def Faq(request):
     return render(request, 'faq.html')
 
-def jobsingle(request):
-    return render(request, 'jobsingle.html')
+
 def job_1(request):
     return render(request, 'job1.html')
 def cv(request):

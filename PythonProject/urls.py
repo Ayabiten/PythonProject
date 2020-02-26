@@ -22,6 +22,7 @@ from .views import login
 
 urlpatterns = [
 	path('login/', views.login ,name="login"),
+    path('Signup/', views.Signup,name="Signup"),
     path('job1/', views.job_1 ),
     path('job2/', views.job_2 ),
     path('job3/', views.job_3 ),
@@ -39,7 +40,6 @@ urlpatterns = [
     path('Accueil/', views.accueil),
     path('Profile/', views.Profile),
     path('FAQ/', views.Faq),
-    path('formulaire/', views.formulaire),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
    # path('accounts/login/', auth_views.LoginView.as_view()),
