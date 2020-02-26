@@ -10,7 +10,8 @@ class Candidat(models.Model):
     password = models.CharField(max_length=30)
     Address = models.CharField(max_length=30)
     ville = models.CharField(max_length=30)
-
+    def __str__(self):
+        return self.Nom
 class CV(models.Model):
     cv = models.CharField(max_length=50)
     candidat = models.ForeignKey(Candidat,on_delete=models.CASCADE)
@@ -21,7 +22,7 @@ class Recruteur(models.Model):
     Prenom = models.CharField(max_length=30)
     Email = models.EmailField(max_length=30)
     password = models.CharField(max_length=30)
-    Entreprise = models.CharField(max_length=300)
+    Address = models.CharField(max_length=30)
     ville = models.CharField(max_length=30)
 
 class Contactus(models.Model):

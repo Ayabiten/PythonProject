@@ -1,13 +1,24 @@
 from django.shortcuts import render
 from django.contrib.auth import authenticate , login , logout
 from django.contrib.auth.forms import UserCreationForm
-from Recrutement.models import Contactus
+from Recrutement.models import Contactus,Candidat
 
 #def login(request):
-    #return render(request, 'login.html')
+#return render(request, 'login.html')
 
 def Signup(request):
-    return render(request, 'SignUp.html')
+    if request.method == 'POST':
+        Nom = request.POST.get('Nom')
+        Prenom = request.POST.get('Prenom')
+        Email = request.POST.get('email')
+        password = request.POST.get('password')
+        Address = request.POST.get('address')
+        ville = request.POST.get('ville')
+        m = Candidat(Nom=Nom,Prenom=Prenom,Email=Email,password=password,Address=Address,ville=ville)
+        m.save()
+        return render(request, 'index1.html')
+    else:
+        return render(request, 'registration/SignUp.html')
 def ContactUs(request):
     if request.method == 'POST':
         Nom = request.POST.get('fname')

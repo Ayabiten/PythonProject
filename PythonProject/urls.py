@@ -22,13 +22,13 @@ from .views import login
 
 urlpatterns = [
 	path('login/', views.login ,name="login"),
+    path('Signup/', views.Signup ,name="Signup"),
     path('job1/', views.job_1 ),
     path('job2/', views.job_2 ),
     path('job3/', views.job_3 ),
     path('job4/', views.job_4 ),
     path('job5/', views.job_5 ),
     path('job6/', views.job_6 ),
-    path('Signup/', views.Signup),
     path('ContactUs/', views.ContactUs, name='ContactUs'),
     path('success/', views.success ,name="success"),
     path('Offers/', views.accueil),
