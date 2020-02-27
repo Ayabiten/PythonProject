@@ -51,10 +51,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'PythonProject.urls'
-# Template directory setting
-TEMPLATE_DIRS = (
-    os.path.join(os.path.dirname(__file__), 'Templates'),
-)
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
