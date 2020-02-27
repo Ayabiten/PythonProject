@@ -5,6 +5,7 @@
     {% load static %}
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <style type="text/css">
     body{
@@ -227,7 +228,6 @@
     font-weight: 600;
     color: #0062cc;
 }
-
 </style>
 
     <script type="text/javascript">
@@ -244,33 +244,7 @@
     </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-          <div class="container-fluid">
-            <div class="profile-img">
-                            <img id="blah" src="{% static 'img/Candidat.png' %} "  />
-                            <div class="file btn btn-lg btn-primary">
-                                Change Photo
-                                <input type='file' onchange="readURL(this);" />
-                             </div>
-                        </div>
-        <button type="button" name="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-        <a href="/index/" class="nav-link">HOME</a>
-            </li>  <li class="nav-item">
-          <a href="/About/" class="nav-link">about</a>
-              </li>  <li class="nav-item">
-            <a href="/jobsingle/" class="nav-link">offres</a>
-                </li>  
-          </ul>
-
-        </div>
-
-          </div>
-        </nav>
+   
 <div class="container">
 <div class="row">
       <div class="col-xs-12 col-sm-9">
@@ -282,15 +256,20 @@
           </div>
           <div class="panel-body">
             <div class="profile__avatar">
-              <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="...">
+              <img src="{% static 'img/Candidat.png' %}"  id="blah"  alt="...">
             </div>
+
             <div class="profile__header">
-              <h4>Richard Roe <small>Administrator</small></h4>
+              <h4>Iabiten Achraf <small>expert en cybersécurité </small></h4>
               <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non nostrum odio cum repellat veniam eligendi rem cumque magnam autem delectus qui.
+                diplomé d'un master en  cybersecurite a l'ensa et license professionnel en reseau,avec une experience de 3 ans dans le domaine de la cybersécurité au sein d'une société a casablanca.
               </p>
               
             </div>
+            <div class="col-md-2">
+        
+                                <input type='file' onchange="readURL(this);" />
+                             </div>
           </div>
         </div>
 
@@ -303,16 +282,16 @@
             <table class="table profile__table">
               <tbody>
                 <tr>
-                  <th><strong>Location</strong></th>
-                  <td>United States</td>
+                  <th><strong>pays</strong></th>
+                  <td>Maroc</td>
                 </tr>
                 <tr>
-                  <th><strong>Company name</strong></th>
+                  <th><strong>société</strong></th>
                   <td>Simpleqode.com</td>
                 </tr>
                 <tr>
-                  <th><strong>Position</strong></th>
-                  <td>Front-end developer</td>
+                  <th><strong>métier</strong></th>
+                  <td>expert en cybersécurité</td>
                 </tr>
               </tbody>
             </table>
@@ -322,22 +301,22 @@
         <!-- Community -->
         <div class="panel panel-default">
           <div class="panel-heading">
-          <h4 class="panel-title">Community</h4>
+          <h4 class="panel-title">activités</h4>
           </div>
           <div class="panel-body">
             <table class="table profile__table">
               <tbody>
                 <tr>
-                  <th><strong>Comments</strong></th>
+                  <th><strong>commentaire</strong></th>
                   <td>58584</td>
                 </tr>
                 <tr>
-                  <th><strong>Member since</strong></th>
+                  <th><strong>membre depuis</strong></th>
                   <td>Jan 01, 2016</td>
                 </tr>
                 <tr>
-                  <th><strong>Last login</strong></th>
-                  <td>1 day ago</td>
+                  <th><strong>active</strong></th>
+                  <td>il ya 2 heurs</td>
                 </tr>
               </tbody>
             </table>
@@ -347,7 +326,7 @@
         <!-- Latest posts -->
         <div class="panel panel-default">
           <div class="panel-heading">
-          <h4 class="panel-title">Latest posts</h4>
+          <h4 class="panel-title">dernière publication</h4>
           </div>
           <div class="panel-body">
             <div class="profile__comments">
@@ -362,10 +341,10 @@
                 </div>
                 <div class="profile-comments__body">
                   <h5 class="profile-comments__sender">
-                    Richard Roe <small>2 hours ago</small>
+                    Achraf heras <small>il ya 2 heures</small>
                   </h5>
                   <div class="profile-comments__content">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, corporis. Voluptatibus odio perspiciatis non quisquam provident, quasi eaque officia.
+                    achraf heras a postulé pour la societe x il ya 5  heures .veuillez clickez sur son profil pour d'autre informations
                   </div>
                 </div>
               </div>
@@ -380,10 +359,10 @@
                 </div>
                 <div class="profile-comments__body">
                   <h5 class="profile-comments__sender">
-                    Richard Roe <small>5 hours ago</small>
+                    Akerdad Nihal <small>il ya 5 heures<</small>
                   </h5>
                   <div class="profile-comments__content">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero itaque dolor laboriosam dolores magnam mollitia, voluptatibus inventore accusamus illo.
+                     Akerdad Nihal a postulé pour la societe x il ya 7  heures .veuillez clickez sur son profil pour d'autre informations
                   </div>
                 </div>
               </div>
@@ -398,10 +377,10 @@
                 </div>
                 <div class="profile-comments__body">
                   <h5 class="profile-comments__sender">
-                    Richard Roe <small>1 day ago</small>
+                    zineb Louzi <small>il ya 7 heures<</small>
                   </h5>
                   <div class="profile-comments__content">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, esse, magni aliquam quisquam modi delectus veritatis est ut culpa minus repellendus.
+                   zineb Louzi a commenté une publication a propos d'un offre d'emploi .clickez sue son profil pour voir les détails.
                   </div>
                 </div>
               </div>
@@ -414,9 +393,13 @@
         
         <!-- Contact user -->
         <div class="col-md-8">
+           
+
             <p>
                <a href="/cv/" type="submit" class="profile__contact-btn btn btn-lg btn-block btn-info" data-toggle="modal"  value="Voir le cv" name="btnAddMore" onclick="validation();">voir CV</a>
                </p>
+
+
               </div>
               <script type="text/javascript">
                 function validation()
@@ -444,17 +427,8 @@
               <i class="fa fa-phone"></i>
             </div>
             <div class="profile__contact-info-body">
-              <h5 class="profile__contact-info-heading">Work number</h5>
-              (000)987-65-43
-            </div>
-          </div>
-          <div class="profile__contact-info-item">
-            <div class="profile__contact-info-icon">
-              <i class="fa fa-phone"></i>
-            </div>
-            <div class="profile__contact-info-body">
-              <h5 class="profile__contact-info-heading">Mobile number</h5>
-              (000)987-65-43
+              <h5 class="profile__contact-info-heading">numéro de telephone</h5>
+              +212 06123456
             </div>
           </div>
           <div class="profile__contact-info-item">
@@ -463,7 +437,7 @@
             </div>
             <div class="profile__contact-info-body">
               <h5 class="profile__contact-info-heading">E-mail address</h5>
-              <a href="mailto:admin@domain.com">admin@domain.com</a>
+              <a href="mailto:admin@domain.com">achraf@domain.com</a>
             </div>
           </div>
           <div class="profile__contact-info-item">
@@ -471,8 +445,8 @@
               <i class="fa fa-map-marker"></i>
             </div>
             <div class="profile__contact-info-body">
-              <h5 class="profile__contact-info-heading">Work address</h5>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              <h5 class="profile__contact-info-heading"> address</h5>
+              hay Amal ,Taza
             </div>
           </div>
         </div>
