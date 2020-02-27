@@ -34,9 +34,15 @@ class Contactus(models.Model):
         return self.Objet
 
 class OffreEmploi(models.Model):
-    Domaine = models.CharField(max_length=300)
-    Offre = models.TextField()
-    DateI = models.DateField(null=True, blank=True)
+    Email = models.EmailField(max_length=30,default=None)
+    Title = models.CharField(max_length=30,default=None)
+    Location = models.CharField(max_length=30,default=None)
+    Region = models.CharField(max_length=30,default=None)
+    PostDescription = models.TextField(default=None)
+    NomEntreprise = models.CharField(max_length=30,default=None)
+    VilleEntreprise = models.CharField(max_length=30,default=None)
+    EntDescription = models.TextField(default=None)
+    siteweb = models.CharField(max_length=30,default=None)
     Recruteur = models.ForeignKey(Recruteur, on_delete=models.CASCADE, default=None, blank=True, null=True)
     def __str__(self):
-        return self.Offre
+        return self.Title

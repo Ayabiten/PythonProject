@@ -1,72 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="robots" content="noindex, nofollow">
+    <title>profile</title>
     {% load static %}
-
-    <title>Votre profil</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{% static 'css/bootstrap.min.css' %} " rel="stylesheet" id="bootstrap-css">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <style type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style type="text/css">
     body{
-    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    margin-top:20px;
+    background:#f5f5f5;
 }
-.emp-profile{
-    padding: 3%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    border-radius: 0.5rem;
-    background: #fff;
+/**
+ * Panels
+ */
+/*** General styles ***/
+.panel {
+  box-shadow: none;
 }
-.profile-img{
-    text-align: center;
+.panel-heading {
+  border-bottom: 0;
 }
-.profile-img img{
-    width: 70%;
-    height: 100%;
+.panel-title {
+  font-size: 17px;
 }
-.profile-img .file {
-    position: relative;
-    overflow: hidden;
-    margin-top: -20%;
-    width: 70%;
-    border: none;
-    border-radius: 0;
-    font-size: 15px;
-    background: #212529b8;
+.panel-title > small {
+  font-size: .75em;
+  color: #999999;
 }
-.profile-img .file input {
-    position: absolute;
-    opacity: 0;
-    right: 0;
-    top: 0;
+.panel-body *:first-child {
+  margin-top: 0;
 }
-.profile-head h5{
-    color: #333;
+.panel-footer {
+  border-top: 0;
 }
-.profile-head h6{
-    color: #0062cc;
+
+.panel-default > .panel-heading {
+    color: #333333;
+    background-color: transparent;
+    border-color: rgba(0, 0, 0, 0.07);
 }
-.profile-edit-btn{
-    border: none;
-    border-radius: 1.5rem;
-    width: 70%;
-    padding: 2%;
-    font-weight: 600;
-    color: #6c757d;
-    cursor: pointer;
+
+/**
+ * Profile
+ */
+/*** Profile: Header  ***/
+.profile__avatar {
+  float: left;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 20px;
+  overflow: hidden;
 }
-.proile-rating{
-    font-size: 12px;
-    color: #818182;
-    margin-top: 5%;
+@media (min-width: 768px) {
+  .profile__avatar {
+    width: 100px;
+    height: 100px;
+  }
 }
-.proile-rating span{
-    color: #495057;
-    font-size: 15px;
-    font-weight: 600;
+.profile__avatar > img {
+  width: 100%;
+  height: auto;
+}
+.profile__header {
+  overflow: hidden;
+}
+.profile__header p {
+  margin: 20px 0;
+}
+/*** Profile: Table ***/
+@media (min-width: 992px) {
+  .profile__table tbody th {
+    width: 200px;
+  }
+}
+/*** Profile: Recent activity ***/
+.profile-comments__item {
+  position: relative;
+  padding: 15px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.profile-comments__item:last-child {
+  border-bottom: 0;
+}
+.profile-comments__item:hover,
+.profile-comments__item:focus {
+  background-color: #f5f5f5;
+}
+.profile-comments__item:hover .profile-comments__controls,
+.profile-comments__item:focus .profile-comments__controls {
+  visibility: visible;
+}
+.profile-comments__controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  visibility: hidden;
+}
+.profile-comments__controls > a {
+  display: inline-block;
+  padding: 2px;
+  color: #999999;
+}
+.profile-comments__controls > a:hover,
+.profile-comments__controls > a:focus {
+  color: #333333;
+}
+.profile-comments__avatar {
+  display: block;
+  float: left;
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profile-comments__avatar > img {
+  width: 100%;
+  height: auto;
+}
+.profile-comments__body {
+  overflow: hidden;
+}
+.profile-comments__sender {
+  color: #333333;
+  font-weight: 500;
+  margin: 5px 0;
+}
+.profile-comments__sender > small {
+  margin-left: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #999999;
+}
+@media (max-width: 767px) {
+  .profile-comments__sender > small {
+    display: block;
+    margin: 5px 0 10px;
+  }
+}
+.profile-comments__content {
+  color: #999999;
+}
+/*** Profile: Contact ***/
+.profile__contact-btn {
+  padding: 12px 20px;
+  margin-bottom: 20px;
+}
+.profile__contact-hr {
+  position: relative;
+  border-color: rgba(0, 0, 0, 0.1);
+  margin: 40px 0;
+}
+.profile__contact-hr:before {
+  content: "OR";
+  display: block;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #f5f5f5;
+  color: #c6c6cc;
+}
+.profile__contact-info-item {
+  margin-bottom: 30px;
+}
+.profile__contact-info-item:before,
+.profile__contact-info-item:after {
+  content: " ";
+  display: table;
+}
+.profile__contact-info-item:after {
+  clear: both;
+}
+.profile__contact-info-item:before,
+.profile__contact-info-item:after {
+  content: " ";
+  display: table;
+}
+.profile__contact-info-item:after {
+  clear: both;
+}
+.profile__contact-info-icon {
+  float: left;
+  font-size: 18px;
+  color: #999999;
+}
+.profile__contact-info-body {
+  overflow: hidden;
+  padding-left: 20px;
+  color: #999999;
+}
+.profile__contact-info-body a {
+  color: #999999;
+}
+.profile__contact-info-body a:hover,
+.profile__contact-info-body a:focus {
+  color: #999999;
+  text-decoration: none;
 }
 .profile-head .nav-tabs{
     margin-bottom:5%;
@@ -79,24 +215,11 @@
     border: none;
     border-bottom:2px solid #0062cc;
 }
-.profile-work{
-    padding: 14%;
-    margin-top: -15%;
-}
-.profile-work p{
-    font-size: 12px;
-    color: #818182;
-    font-weight: 600;
-    margin-top: 10%;
-}
-.profile-work a{
-    text-decoration: none;
-    color: #495057;
-    font-weight: 600;
-    font-size: 14px;
-}
-.profile-work ul{
-    list-style: none;
+.profile__contact-info-heading {
+  margin-top: 2px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #999999;
 }
 .profile-tab label{
     font-weight: 600;
@@ -104,9 +227,8 @@
 .profile-tab p{
     font-weight: 600;
     color: #0062cc;
-}    </style>
-    <script src="{% static 'js/jquery-3.4.1.slim.min.js' %} "></script>
-    <script src="{% static 'js/bootstrap.min.js' %} "></script>
+}
+</style>
 
     <script type="text/javascript">
         function readURL(input) {
@@ -122,39 +244,162 @@
     </script>
 </head>
 <body>
+   
+<div class="container">
+<div class="row">
+      <div class="col-xs-12 col-sm-9">
+        
+        <!-- User profile -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+          <h4 class="panel-title">User profile</h4>
+          </div>
+          <div class="panel-body">
+            <div class="profile__avatar">
+              <img src="{% static 'img/Candidat.png' %}"  id="blah"  alt="...">
+            </div>
 
-    <div class="container emp-profile">
-            <form method="post">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="profile-img">
-                            <img id="blah" src="{% static 'img/Candidat.png' %} "  />
-                            <div class="file btn btn-lg btn-primary">
-                                Change Photo
+            <div class="profile__header">
+              <h4>Iabiten Achraf <small>expert en cybersécurité </small></h4>
+              <p class="text-muted">
+                diplomé d'un master en  cybersecurite a l'ensa et license professionnel en reseau,avec une experience de 3 ans dans le domaine de la cybersécurité au sein d'une société a casablanca.
+              </p>
+              
+            </div>
+            <div class="col-md-2">
+        
                                 <input type='file' onchange="readURL(this);" />
                              </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="profile-head">
-                                    <h5>
-Iabiten Achraf                                    </h5>
-                                    <h6>
-Cyber Security                                     </h6>
-                                    <p class="proile-rating">gender : <span>male</span></p>
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Biographie</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+          </div>
+        </div>
 
-                    <div class="col-md-2">
-               <a href="/cv/" type="submit" class="profile-edit-btn"  value="Voir le cv" name="btnAddMore" onclick="validation();">voir CV</a>
+        <!-- User info -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+          <h4 class="panel-title">User info</h4>
+          </div>
+          <div class="panel-body">
+            <table class="table profile__table">
+              <tbody>
+                <tr>
+                  <th><strong>pays</strong></th>
+                  <td>Maroc</td>
+                </tr>
+                <tr>
+                  <th><strong>société</strong></th>
+                  <td>Simpleqode.com</td>
+                </tr>
+                <tr>
+                  <th><strong>métier</strong></th>
+                  <td>expert en cybersécurité</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Community -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+          <h4 class="panel-title">activités</h4>
+          </div>
+          <div class="panel-body">
+            <table class="table profile__table">
+              <tbody>
+                <tr>
+                  <th><strong>commentaire</strong></th>
+                  <td>58584</td>
+                </tr>
+                <tr>
+                  <th><strong>membre depuis</strong></th>
+                  <td>Jan 01, 2016</td>
+                </tr>
+                <tr>
+                  <th><strong>active</strong></th>
+                  <td>il ya 2 heurs</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Latest posts -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+          <h4 class="panel-title">dernière publication</h4>
+          </div>
+          <div class="panel-body">
+            <div class="profile__comments">
+              <div class="profile-comments__item">
+                <div class="profile-comments__controls">
+                  <a href="#"><i class="fa fa-share-square-o"></i></a>
+                  <a href="#"><i class="fa fa-edit"></i></a>
+                  <a href="#"><i class="fa fa-trash-o"></i></a>
+                </div>
+                <div class="profile-comments__avatar">
+                  <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="...">
+                </div>
+                <div class="profile-comments__body">
+                  <h5 class="profile-comments__sender">
+                    Achraf heras <small>il ya 2 heures</small>
+                  </h5>
+                  <div class="profile-comments__content">
+                    achraf heras a postulé pour la societe x il ya 5  heures .veuillez clickez sur son profil pour d'autre informations
+                  </div>
+                </div>
+              </div>
+              <div class="profile-comments__item">
+                <div class="profile-comments__controls">
+                  <a href="#"><i class="fa fa-share-square-o"></i></a>
+                  <a href="#"><i class="fa fa-edit"></i></a>
+                  <a href="#"><i class="fa fa-trash-o"></i></a>
+                </div>
+                <div class="profile-comments__avatar">
+                  <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="...">
+                </div>
+                <div class="profile-comments__body">
+                  <h5 class="profile-comments__sender">
+                    Akerdad Nihal <small>il ya 5 heures<</small>
+                  </h5>
+                  <div class="profile-comments__content">
+                     Akerdad Nihal a postulé pour la societe x il ya 7  heures .veuillez clickez sur son profil pour d'autre informations
+                  </div>
+                </div>
+              </div>
+              <div class="profile-comments__item">
+                <div class="profile-comments__controls">
+                  <a href="#"><i class="fa fa-share-square-o"></i></a>
+                  <a href="#"><i class="fa fa-edit"></i></a>
+                  <a href="#"><i class="fa fa-trash-o"></i></a>
+                </div>
+                <div class="profile-comments__avatar">
+                  <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="...">
+                </div>
+                <div class="profile-comments__body">
+                  <h5 class="profile-comments__sender">
+                    zineb Louzi <small>il ya 7 heures<</small>
+                  </h5>
+                  <div class="profile-comments__content">
+                   zineb Louzi a commenté une publication a propos d'un offre d'emploi .clickez sue son profil pour voir les détails.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-xs-12 col-sm-3">
+        
+        <!-- Contact user -->
+        <div class="col-md-8">
+           
+
+            <p>
+               <a href="/cv/" type="submit" class="profile__contact-btn btn btn-lg btn-block btn-info" data-toggle="modal"  value="Voir le cv" name="btnAddMore" onclick="validation();">voir CV</a>
+               </p>
+
+
               </div>
               <script type="text/javascript">
                 function validation()
@@ -168,112 +413,48 @@ Cyber Security                                     </h6>
                 }
               </script>
 
-                        <div class="profile-work">
-                            <p>WORK LINK</p>
-                            <a href="">Linkedin</a><br/>
-                            <a href="">Facebook</a><br/>
-                            <a href="">Blog</a>
-                            <p>SKILLS</p>
-                            <a href="">Web Designer</a><br/>
-                            <a href="">Web Developer</a><br/>
-                            <a href="">WordPress</a><br/>
-                            <a href="">Django,Bootstrap</a><br/>
-                            <a href="">PHP,C,java,python,.Net</a><br/>
-                        </div>
 
-                        <div class="tab-content profile-tab" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>User Id</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Yabiii</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Name</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Achraf Iabiten</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Email</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>ach.yabiii@gmail.com</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Phone</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>(+212) 6 88 11 50 69</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Profession</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Cyber Security</p>
-                                            </div>
-                                        </div>
-                            </div>
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Experience</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Cyber Security , Bi Consultant</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>votre age</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>21 Ans</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Total Projects</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>23</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>English Level</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Medium</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Availability</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>ASAP</p>
-                                            </div>
-                                        </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <label>Your Bio</label><br/>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-            </form>
+
+
+
+       
+        <hr class="profile__contact-hr">
+        
+        <!-- Contact info -->
+        <div class="profile__contact-info">
+          <div class="profile__contact-info-item">
+            <div class="profile__contact-info-icon">
+              <i class="fa fa-phone"></i>
+            </div>
+            <div class="profile__contact-info-body">
+              <h5 class="profile__contact-info-heading">numéro de telephone</h5>
+              +212 06123456
+            </div>
+          </div>
+          <div class="profile__contact-info-item">
+            <div class="profile__contact-info-icon">
+              <i class="fa fa-envelope-square"></i>
+            </div>
+            <div class="profile__contact-info-body">
+              <h5 class="profile__contact-info-heading">E-mail address</h5>
+              <a href="mailto:admin@domain.com">achraf@domain.com</a>
+            </div>
+          </div>
+          <div class="profile__contact-info-item">
+            <div class="profile__contact-info-icon">
+              <i class="fa fa-map-marker"></i>
+            </div>
+            <div class="profile__contact-info-body">
+              <h5 class="profile__contact-info-heading"> address</h5>
+              hay Amal ,Taza
+            </div>
+          </div>
         </div>
+
+      </div>
+    </div>
+</div>
 </body>
 </html>
+
+

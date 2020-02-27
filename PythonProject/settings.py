@@ -51,14 +51,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'PythonProject.urls'
-# Template directory setting
-TEMPLATE_DIRS = (
-    os.path.join(os.path.dirname(__file__), 'Templates'),
-)
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:\\xampp\htdocs\PythonProject\PythonProject\Templates'],
+        'DIRS': ['D:\downloads\www\PythonProject\PythonProject\Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
