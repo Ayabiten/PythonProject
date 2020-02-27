@@ -71,6 +71,9 @@ def formulaire(request):
 def success(request):
     return render(request, 'success.html')
 
+def Postoffer(request):
+    return render(request, 'post-job.html')
+
 def login(request):
     context={}
     if request.method =="POST":
