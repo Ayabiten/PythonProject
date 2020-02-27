@@ -39,37 +39,39 @@
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
 
-
     <!-- NAVBAR -->
     <header class="site-navbar mt-3">
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="site-logo col-6"><a href="/">MCCJOB</a></div>
-                    <nav class="mx-auto site-navigation">
-                      <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
-                        <li><a href="/" class="nav-link ">Home</a></li>
 
-                        <li><a href="/about">Post a Job</a></li>
+          <nav class="mx-auto site-navigation">
+            <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+              <li><a href="/" class="nav-link ">Accueil</a></li>
 
-                        {% if user.is_authenticated %}
-                        <li class="has-children">
-                          <a href="job-listings.html" class="active">Profile</a>
-                          <ul class="dropdown">
-                            <li><a href="/Profile/" class="active">Mon Compte</a></li>
-                            <li><a href="/accounts/logout">Logout</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="/Offers" >Offers</a></li>
+              <li><a href="/postuler" >Ajouter une offre</a></li>
 
-                      	{% else %}
-                        <li><a href="/accounts/login/">Log In</a></li>
-                      	{% endif %}
+              {% if user.is_authenticated %}
+              <li class="has-children">
+              <a href="#" >Profil</a>
+                <ul class="dropdown">
+                  <li><a href="/Profile/" >Mon Compte</a></li>
+                  <li><a href="/accounts/logout">Logout</a></li>
+                </ul>
+                <li><a href="/Offers" >Offres</a></li>
+              </li>
+              {% else %}
+              <li><a href="/accounts/login/">Login</a></li>
+              <li><a href="/accounts/Signup/">SignUp</a></li>
+              {% endif %}
 
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/ContactUs">Contact</a></li>
+              <li><a href="/about" >A propos</a></li>
+              <li><a href="/ContactUs">Contact</a></li>
 
-                      </ul>
-                    </nav>
+            </ul>
+          </nav>
+
+
         </div>
       </div>
     </header>
