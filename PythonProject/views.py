@@ -40,6 +40,10 @@ def job_1(request):
     return render(request, 'job1.html')
 def cv(request):
     return render(request, 'cv.html')
+def cv1(request):
+    return render(request, 'cv1.html')
+def cv2(request):
+    return render(request, 'cv2.html')
 def job_2(request):
     return render(request, 'job2.html')
 def job_3(request):
@@ -64,7 +68,10 @@ def about(request):
 
 def Profile(request):
     return render(request, 'profile.html')
-
+def Profile2(request):
+    return render(request, 'profile2.html')
+def Profile3(request):
+    return render(request, 'profile3.html')
 def formulaire(request):
     return render(request, 'formulaire.html')
 
